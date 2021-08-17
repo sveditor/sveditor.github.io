@@ -1,0 +1,3805 @@
+<h1>SVEditor Update Site</h1>
+<pre>
+
+------------------------------------------------------------------------------
+-- 2.1.7 Release --
+
+- #(nobug) - Migrate to Maven-based build
+
+------------------------------------------------------------------------------
+-- 2.1.6 Release --
+
+- #(nobug) - Recognize (and ignore) the `uselib directive
+
+------------------------------------------------------------------------------
+-- 2.1.5 Release --
+
+- #(enh - 138) - Match file paths in the console with a format "path", line
+
+------------------------------------------------------------------------------
+-- 2.1.4 Release --
+
+- #(520) - Correct issue wih coverpoint 'X with' expression 
+
+- #(nobug) - Correct a conflict between the string and single-line comment 
+  highlighters that caused a comment embedded in a string to not be 
+  displayed correctly
+
+------------------------------------------------------------------------------
+-- 2.1.3 Release --
+
+- #(nobug) - Correct a Linux-specific issue with support for external files.
+
+- #(519) Preferences bug with "Save Actions" 
+
+- #(518) Macro Content Assist not formatting code
+
+
+------------------------------------------------------------------------------
+-- 2.1.2 Release --
+
+- #(519) Preferences bug with "Save Actions" 
+
+- #(enh) - Automatically link files referenced by the filelist into the
+           project. This allows the "open resource" operation and file 
+           search to see external files. There's more work to be done here,
+           but initial functionality is in place.
+
+- #(520) Parse error when soft constraints are used in an inline constraint
+
+
+------------------------------------------------------------------------------
+-- 2.1.1 Release --
+
+- #(517) - Correct an issue with the new error-recovery code when the 
+  number of errors exceeds 100 (the preset limit)
+  
+------------------------------------------------------------------------------
+-- 2.1.0 Release --
+
+- #(nobug) - Correct parse bug with interface class multiple extension
+
+- #(nobug) - Ensure built-in classes with __sv_builtin prefix are not 
+  provided as content-assist proposals
+  
+- #(nobug) - Improve parsing error recovery to resume parsing the next
+  file. This improves error recovery when parsing a package that 
+  sub-includes several files.
+
+------------------------------------------------------------------------------
+-- 2.0.9 Release -- ??
+ 
+------------------------------------------------------------------------------
+-- 2.0.8 Release --
+
+- #(enh) - Add support for built-in 'semaphore' class
+
+- #(enh) - Add support for built-in 'mailbox' class
+
+- #(506) Copying multiple lines 
+
+- #(514) Indenter: Issues moving lines through multi-line comments
+
+- #(515) Colorizer: Preference to "Treat all files as system verilog" ignored 
+
+------------------------------------------------------------------------------
+-- 2.0.7 Release --
+
+- #(nobug) - Restored content-assist for built-in types (queues, arrays, process, etc)
+
+- #(enh) - Connect the 'Rebuild SV Index' operation to the new build console
+
+------------------------------------------------------------------------------
+-- 2.0.6 Release --
+
+- #(enh) - Enhance the editor performance when used with large files. This was
+  done by changing how annotations (eg error markers, folding regions) are
+  added and updated 
+  
+- #(enh) - Extend SystemVerilog build console support to incremental builds
+  and project initialization
+
+
+------------------------------------------------------------------------------
+-- 2.0.5 Release --
+
+- #(enh) - Add a SystemVerilog build console that shows the index process
+
+- #(504) - Wrong indentation using DPI keywords 
+
+------------------------------------------------------------------------------
+-- 2.0.4 Release --
+
+- #(509) - Correct incorrect indentation of a labeled covergroup
+
+- #(508) - Correct incorrect parsing of implication within an expression
+
+- #(507) - Correct issue parsing 'unique' constraint inside with block
+
+
+------------------------------------------------------------------------------
+-- 2.0.3 Release --
+
+- #(503) Incorrect indent of `elsif
+
+- #(504) SVEditor (including Eclipse) crashes after character insertion
+ 
+------------------------------------------------------------------------------
+-- 2.0.2 Release --
+
+- #(502) - Format /beautifier of new feature matching begin/end code is not working with some cases, besides it is broken in 2.0.1
+
+- #(489) - A few more fixes to (hopefully) prevent this bug.
+
+------------------------------------------------------------------------------
+-- 2.0.1 Release --
+
+- #(enh) - Reorganize structure of package hierarchy view
+ 
+- #(497) - Editor scrolls to start of file when saving with "Remove trailing whitespace" enabled
+
+- #(129) - Improvement Request: Highlight matching brace on begin / end
+
+- #(489) - Correct object-type ID issue for new 'unique constraint' object
+
+- #(499) - Format /beautifier of special code in systemverilog is wrong (interface class) 
+
+- #(500) - Add support for interface class and 'implements' clause of class declaration
+
+- #(enh - 124) - Update build-script launcher to support termination.
+
+- #(498) - Outline view is now properly shown for files that are not part of the index
+
+------------------------------------------------------------------------------
+-- 2.0.0.1 Release --
+
+- #(496) - Move back to building SVEditor Java7  (vs Java8)
+
+------------------------------------------------------------------------------
+-- 2.0.0.2 Release --
+
+- #(489) Correct object-type ID issue for new 'unique constraint' object
+
+
+------------------------------------------------------------------------------
+-- 2.0.0 Release --
+
+- #(enh) - Add Classes, Modules, and Interfaces sub-sections to project explorer
+
+- #(enh) - Add Classes node to the Objects view
+
+- #(487) Indent of forever body is incorrect
+
+- #(486) Goto Next / Previous Member not behaving as expected 
+
+- #(485) Indent when adding Ndocs using Alt+Shift+J incorrect
+
+- #(ehh - 20) Auto-indent: <TAB> at line begin should set correct indent
+
+- #(491) Outline: Tracking of cursor has issues when code is folded 
+
+- #(492) Support change of matching bracket color in SVeditor - eclipse 
+
+- #(494) Parser: Optional second parameter for timeunit 
+
+- #(493) Editor: Find Next / Previous element doesn't behave when code folding is active 
+
+- #(126) Feature request: remove trailing whitespace on save (Window>Preferences>SVEditor>SaveActions)
+ 
+- #(enh) Feature request: Format file on save (Window>Preferences>SVEditor>SaveActions)
+ 
+- #(nobug) - Support class extension from a parameterized class with
+ '#' omitted. For example: class ext extends base (1,2,3);
+
+- #(enh) - Add support for exporting Custom Code Templates with preferences
+
+
+------------------------------------------------------------------------------
+-- 1.9.9 Release --
+
+- #(enh) - Show package structure in the Type Hierarchy view (F4)
+
+- #(enh) - Clean up Project Paths virtual folder. The folder is now named 'SV Contents'
+
+- #(enh) - Add "Packages" entry to 'Project Paths' virtual folder
+
+- #(enh) - Enable double-click navigation to packages 
+  from 'Packages' list shown in the navigator
+
+- #(480) Indent of default clocking block body is incorrect
+
+- #(479) Unique is not supported by SVE
+
+- #(483) Indenter: constraint Unique statement not indented correctly 
+
+- #(484) - Correct handling of multi-line strings as macro parameters
+
+------------------------------------------------------------------------------
+-- 1.9.8 Release --
+
+- #(nobug) Constraint indenter updates
+
+- #(408) Code template issue
+ 
+- #(470) bins usage
+
+- #(332) Text is duplicated on copy&paste
+ 
+- #(474) Indenter: Add randsequence support 
+
+- #(nobug) - Correct a parse error involving inside in a primary position
+
+- #(nobug) - Correct pre-processor error involving a blank terminal parameter
+  `MY_MACRO(P1,)
+  
+- #(nobug) - Correct pre-processor error involving double quotes in 
+  `protected region
+  
+- #(nobug) - Correct a parse bug involving map-initialization expression with
+  a concat at the key
+
+------------------------------------------------------------------------------
+-- 1.9.7 Release --
+
+- #(nobug) - Update Project Explorer decorator to recognize when files in a
+  linked folder are being indexed via an absolute path (eg ${PROJECT_LOC}/../../folder/...)
+  
+- #() - Remove Global Defines tab from project properties, since it duplicates
+  functionality provided by the filelist
+  
+- #(472) - Correct incorrect expansion of `" macro pattern
+
+- #(471) 	weird copy paste problem
+
+------------------------------------------------------------------------------
+-- 1.9.6 Release --
+
+- #(nobug) - Correct a parse bug with import statements in initial blocks
+
+- #(nobug) - Correct an issue with the filelist creator when files are 
+  included via relative paths (eg `include "src/cls.svh")
+  
+- #(nobug) - Correct an issue with creation of relative paths in a
+  new filelist, when the New Filelist wizard is launched from the 
+  New SVE Project wizard
+  
+- #(enh) - Add checkbox to filter discovered filelists from 
+  filelists created by the New Filelist wizard
+
+------------------------------------------------------------------------------
+-- 1.9.5 Release --
+
+- #(nobug) - Correctly group 'Macro Expansion' view with SVEditor Views
+
+- #(nobug) - Add 'New Filelist' to main SystemVerilog perspective menu
+
+- #466 Auto Block commenting closing hangs or it is too slow with big SV files 
+
+- #467 Find matching brace covergroup/endgroup pair not working
+
+- #195 - Correct a parse error with localparam declared inside a module parameter list
+
+------------------------------------------------------------------------------
+-- 1.9.4 Release --
+
+- #457 - Correct a parse error with "and" event operator
+
+- #122 (enh) - Support comment toggle (CTRL+/) in argument files
+
+- #(nobug) - Corrected a few issues with the macro expansion view. 
+           - Removed extraneous `line directives
+           - Aligned folding regions with text
+           
+- #(enh) - Add net.sf.sveditor.create_project application for creating
+           an SVE project from the commandline 
+
+------------------------------------------------------------------------------
+-- 1.9.3 Release --
+
+- #455 Parser Error: Property containing bus concatenation not recognized 
+
+- #458 Outline View: cover property not displaying correctly 
+
+- #459 Parser: property variable assignment separated by ,
+
+- #462 Indenter: Expect block not property indented 
+
+- #461 Parser: expect ## not expected 
+
+- #463 Parser: support defparam on arrayed paths
+
+- #456 Parser: support 'var' qualifier on module ports
+ 
+------------------------------------------------------------------------------
+-- 1.9.2 Release --
+
+- #(nobug) - Migrate update site off of Sourceforge due to reliability issues
+
+------------------------------------------------------------------------------
+-- 1.9.1 Release --
+
+- #(nobug) - Improvements to incremental indexing
+
+- #(nobug) - Correct an issue with line numbers and Windows-style line endings
+
+------------------------------------------------------------------------------
+-- 1.9.0 Release --
+
+- #392 Wrong indent in case of unrecognized macro
+
+- #445 Move lines "capturing extra lines" 
+
+- Feature request: #(114) Implement "Go to Previous/Next Member" command in SV
+
+- Feature request: #117 Add "Create Javadoc/Natural DOC" keybinding - Alt+Shift+J 
+
+- Feature request: Added ability to add Natural Docs Comments on multiple files
+   from the Project Explorer (Select file(s)>Right-Click>Source>Add Natural Docs
+
+- #446 Line number not captured in for generate loop
+
+- #448 Outline View: Modports not displaying correctly / cryptically 
+
+- #449 Outline View: No icon for final blocks
+
+- #447 Indenter: Clocking blocks not indented
+
+- #(nobug) - Correct an issue with the "Add Project Path" dialog on the
+  SystemVerilog Project Properties page.
+  
+- #451 Outline View: No icon for program blocks
+
+- Feature Request: Added ability to run the indenter on multiple files from
+   the Project Explorer (Select file(s)>Right-Click>Source>Format)
+   
+- #453 Parser error: Unconnected ports being flagged as an error 
+
+------------------------------------------------------------------------------
+-- 1.8.9 Release --
+
+- #(enh - 116) - Add indenter support for move lines up/down action (ALT+UP/ALT+DOWN).
+  Now, the lines being moved are properly indented based on the new containing scope.
+  
+- #(431) - Correct a parse error with task/function scoped end-block identifiers
+
+- #(437) Indenter: Comment following inline typedef mis-indented
+
+- #(438) Paste error when pasting at the start of a line, trailing code duplicated
+
+- #(439) Indenter doesn't take care of leading whitespace on paste 
+
+- #(441) Find matching brace issue with nested begin/ends
+
+- #(442) SV format is not correct using ifdef after assert sv keyword
+
+- #(443) - Correct an issue parsing a sized cast ( (WIDTH)'(expr) )
+
+------------------------------------------------------------------------------
+-- 1.8.8 Release --
+
+- #(414) - Correct issues with using pre-processor macro with `include. 
+  Macro expansion is now properly performed
+  
+- #(318) - Correct spurious pre-processor error when a file doesn't
+  end with a newline.
+
+  
+- #(434) - Find matching brace /? select enclosing element doesn't pick up
+  fork /? join statements
+ 
+- #(435) - Indenter issue with "unique case()" 
+
+- #(enh) - Add a basic Macro Expansion Viewer to assist in debugging 
+  macro-expansion issues
+  
+- #(433) - Correct an issue with expanding macros that have macro 
+  parameter references inside strings.
+  
+
+------------------------------------------------------------------------------
+-- 1.8.7 Release --
+
+- #(nobug) FIXME/TODO markers now placed on the correct line, previously placed
+   on the first line of the enclosing comment
+   
+- #(427) Parsing file tree in File list wizard takes long
+
+- #(428) SVE shows syntax error for correct code
+
+------------------------------------------------------------------------------
+-- 1.8.7 Release --
+
+- #(nobug) - Correct a recursive macro reference issue
+
+- #(nobug) - Remove the obsolete 'Hover Uses Browser' preference. 
+
+------------------------------------------------------------------------------
+-- 1.8.6 Release --
+
+- #(425) - Correct an issue with the plugin-library indexer. Resolved a NPE
+  issue during indexing
+
+- #(426) Task markers (TODO/FIXME) not detected in multi-line comment
+
+------------------------------------------------------------------------------
+-- 1.8.5 Release --
+
+- #(SR - 21) - Scope Hierarchy view to the SystemVerilog perspective. It no
+  longer appears in all perspectives.
+  
+- #(enh)   - Add support for SV 2012 'interface class'
+
+- #(nobug) - Allow variables to be used in run / debug configurations
+
+- #(307) - Natural Doc Parser - Constraint Icon not showing
+
+- #(nobug) - Cleaned up titles of some dialogs in wizards. Added Keyboard shortcuts to buttons of same. 
+ 
+- #(nobug) - Fixed exception created when attempting to write xml - "indent-number" not recognized
+
+- #(422)   - Correct an issue with absolute-path include specifications
+ 
+------------------------------------------------------------------------------
+-- 1.8.4 Release --
+
+- #(416) first_match as first item in property failing to parse 
+
+- #(411) Source formatting issue in SVEditor 1.8.3
+
+- #(nobug) - Correct an issue with the New Filelist wizard, when invoked
+  on a resource within an Eclipse CDT project
+  
+- #(nobug) Tutorial updated to use "SVE New Project Wizard" for project creation
+
+- #(enh) - Change editor to use different keyword set based on the 
+  file type. For example, a SystemVerilog file will highlight the 'int'
+  keyword, while a Verilog file will not.
+  
+- #(420) - Correct a bug involving processing of a macro call with
+  a multi-line string as a parameter
+
+- #(421) - Correct an issue that occurs when a file is modified 
+  and saved before the re-parse thread runs. Now, the re-parse thread
+  checks whether the editor is still open before proceeding to re-parse
+  
+- #(nobug) - Forum discussion reported an issue with typed wires. Typed 
+  wires (with primitive data types) are now supported.
+  
+- #(299) "Select Enclosing Element" shortcut does not work [minor] 
+
+- #(421) Eclipse Preference not importing correctly from preference file 
+
+- #(422) Absolute path for `include file not recognized - added testcase
+
+- #(nobug) - Minor tweaks to "Natural Docs Generation Wizard"
+
+------------------------------------------------------------------------------
+-- 1.8.3 Release --
+
+- #(407) Code Completion - Code completion returns previous result if no hit is found
+
+- #(406) Indenter: always with bussed operation invalid indent
+ 
+- #(nobug) - Correct an issue with the New SVE Project wizard, existing
+  project directories, and the 'Add Project Path...' route to adding 
+  an existing filelist. The button now functions as expected.
+  
+- #(SR - 17) - Correct issue with displaying the labels in the outline
+  view for labeled blocks
+  
+- #(SR - 16) - Correct Open Declaration for class parameters
+
+- #(323) - Correct Open Declaration issue when the instance name of a 
+  module/interface instance is the same as the typename
+  
+- #(409) - Correct Open Declaration and Hover issue when the selected
+  element begins with a macro. Now, the macro is correctly expanded
+  and the complete target is opened.
+  
+- #(308) - Correct an issue with Open Declaration navigation and
+  Eclipse's navigation history. Sometimes using Open Declaration for 
+  a location in the same file as the source resulted in the Eclipse
+  'Back' button not working properly.
+
+------------------------------------------------------------------------------
+-- 1.8.2 Release --
+
+- #(enh) - Add New SVE Project wizard that assists in setup of new SVE
+  projects, including specifying and creating the filelist.
+  
+- #(nobug) - Correct handling of module ports with a direction, but no 
+  explicit type. These are now interpreted as single-bit ports.
+
+------------------------------------------------------------------------------
+-- 1.8.1 Release --
+
+- #(403) Indenter: Indenter error for class containing virtual interface 
+
+- #(402) Arg File Parser error - PROJECT_LOC case sensitive
+
+- #(enh - 111) - Allow an argument file to be registered with the project 
+  from the project-explorer context menu
+  
+- #(402) Arg File Parser error - PROJECT_LOC case sensitive
+
+------------------------------------------------------------------------------
+-- 1.8.0 Release --
+
+- #(395) - Indenter: forever followed by #delay not indented correctly
+
+- #(397) - Add support for 'alias' statement
+
+- #(398) - Correct a parse bug with realtime local variables
+
+- #(396) - Correct a bug when performing Open Declaration from a nested 
+  behavioral statement.
+
+- #(401) - Indenter: #xxx for (...) begin ... end not indented properly
+
+------------------------------------------------------------------------------
+-- 1.7.9 Release --
+
+- #(394) Indenter: Named fork / join not indenting properly
+
+- #(393) - Added support for default clocking that references a previously-defined
+  clocking block.
+  
+- #(enh) - Add hyperlink support for files outside the workspace to the 
+  'Build Script Launch' console. 
+  
+- #(enh) - Add hyperlink support for line numbers that directly follow the path.
+  For example: /home/foobar/file.svh 27
+
+- #(enh) - Major restructuring of the lexer and preprocessor that will, in
+  some cases, boost performance and reduce memory footprint.
+
+------------------------------------------------------------------------------
+-- 1.7.8 Release --
+
+- #(390) - Corrected a NPE when parsing properties. Added more debug info as well.
+
+- #(391) Indenter issue with single line `ifdef 
+
+------------------------------------------------------------------------------
+-- 1.7.7 Release --
+- #(380) Parser Error: cover property begin / end
+
+- #(379) Parser Error: Hierarchy / function call in property not being parsed correctly
+
+- #(381) Parser error: () in array range not parsed properly in properties
+
+- #(378) Indenter error: Property if / else not correct
+
+- #(382) Parse error: sequence ?:;
+
+- #(383) Parser error: Property Cycle delay (##) with an expression not parsed
+
+- #(387) Parser error: Constraint error: Unknown suffix for expression }    
+
+- #(enh) - Modify project-import behavior when 'Project->Build Automatically" 
+  is disabled. Previously, SVE would perform an initial build of the project.
+  Now, the initial build is not performed. 
+
+- #(enh) - Update preferences for Editor Auto-Index. Now, there is an 
+  'Enable' preference button. When auto-index is disabled, the editor
+  content is parsed only when the file is saved. This can improve the
+  user experience with large files.
+  
+- #(384) - Correct a parse issue with a property clocking_event after
+  a sequence_expr. 
+  
+- #(388) - Assertion name not being captured / displayed in outline view
+ 
+- #(386) - Corrected a parse error involving a clocking_event property_expr
+  statement. 
+  
+- #(375) - Add indenter support for labeled statements. A label is considered
+  to not increase the indent for follow-on statements
+
+------------------------------------------------------------------------------
+-- 1.7.6 Release --
+
+- #(nobug) - Correct an issue with Open Declaration for included files.
+
+- #(354) - Update New Class/Interface/Module/Package wizards to use the
+  file_header/file_footer settings from the SV Template Properties page
+  
+- #(354a) - Correct an issue with multi-line template parameters on Windows. 
+  The '\r' character in line-endings introduced extraneous whitespace.
+
+- #(371) Bracket matching doesn't move cursor if off screen
+         - Fixed this item
+         - Also fixed lockup if your cursor was to the right of the close )
+         
+- #(enh - 105) Bracket matching - selection of text within brackets
+         - Implemented... easy enough to take out if not requested
+         
+- #(enh - 79) Add shortcut-key support for collapsing/expanding folding
+  regions. CTRL+NUMPAD_MINUS (default) collapses a folding region, while
+  CTRL+NUMPAD_PLUS expands a folding region.
+  
+  #(374) Specify parsing +=>
+         - Added support for other -=>, +=>, -*>, +*>
+         
+  #(375) Indenter not properly handling assert property directives
+    This has been improved.  Still choking on a label before assert property 
+    as in "ap_label: assert property (..."
+
+
+------------------------------------------------------------------------------
+-- 1.7.5 Release --
+
+- #(369) - Indenter not properly handling `ifdef/`endif
+
+- #(enh) - Enhance script-launcher console to identify and add insert
+  hyperlinks for file paths.
+
+- #(nobug) - Fixed issue with GotoMatchingBracket where "end" was searching forwards instead of backwards.
+   - Also updated so that if your cursor is to the right of a closing brace (or end) the command will still
+     work, allowing us to toggle between the two points without moving the cursor
+
+- #(368) - Cursor position after fixing indentation / formatting of file will now be maintained on the current line
+
+- #(103) - Correct an issue when using the Eclipse 'History' view to view an old revision of a file.
+  The EGit implementation provided misleading filename information to Eclipse, which resulted in 
+  the document being improperly configured.
+
+- #(57) Content Assist Doesn't Show SystemVerilog Keyword
+        - Added module, package and class.
+     
+------------------------------------------------------------------------------
+-- 1.7.4 Release --
+
+- #(367) - Correct an indenter bug with 'specify' blocks that caused the 
+  indenter to hang
+  
+- #(enh) - Recognize 'TODO' and 'FIXME' task tags (no colon) 
+
+- #(enh) - Propagate Debug/Run Console preferences to SVE console. This allows
+  the user to control font colors, as well as limit the amount of text saved 
+  the console
+
+- #(366) - Implemented console-size limits to address heap-overflow issue
+
+
+------------------------------------------------------------------------------
+-- 1.7.3 Release --
+
+- #(enh - 100) - Add log-parsing support for NCSim-produced messages
+
+- #(enh - 99) - Add support for 'TODO:' and 'FIXME:' task tags in comments
+
+- #(enh - 97) - Enhance 'New Module' wizard to explicitly support creation
+  of a 'Verilog' module (ie one whose file has a .v extension)
+
+- #(enh - 87) - Display block label in outline view
+
+------------------------------------------------------------------------------
+-- 1.7.2 Release --
+
+- #(nobug) - Correct a bug in the SystemVerilog Template wizard. Now the 
+  destination folder is properly-populated when the selection is a CDT
+  project folder
+  
+- #(363) - Correct a parse bug involving a DPI import function with
+  an escaped C-identifier.
+  
+- #(364) - Correct a parse bug in an assertion goto-repetition expression 
+
+- #(361) - Correct a parse bug involving array references in a specify path
+
+- #(362) - Correct indent behavior around specify blocks
+
+------------------------------------------------------------------------------
+-- 1.7.1 Release --
+
+- #(enh) - Add support for matching-brace navigation. Positioning the cursor 
+  on a bracket ( (), {}, [] ) or begin/end keyword and selecting
+  CTRL+SHIFT+P moves the cursor to the matching bracket.
+  
+- #(359) - Correct a parse bug with sized, based, signed literals. 
+  Example: 8'sd128
+
+- #(360) - Correct a parse bug with specifying clocking events to the $past task
+
+- #(enh) - Enhance the Questa log parser to support multi-line messages. 
+  Multi-line messages typically result when an error occurs in a file that is
+  included by another file.
+  
+- #(358) - Correct a property-parse bug involving parenthesized property expressions
+ 
+
+------------------------------------------------------------------------------
+-- 1.7.0 Release --
+
+- #(nobug) - Correct an integration bug that could cause the new-XXX wizards, 
+  such as the New SV Class wizard to not properly populate the destination
+  directory field from the current selection. This occurred when the destination
+  folder was managed by the C/C++ Development Tools plug-ins.
+ 
+- #(enh) - Enhance the script launcher dialog to separately accept script
+  and script arguments
+   
+- #(nobug) - Correct a message-parsing issue with the Questa message parser.
+  Now, messages marked as 'suppressible' are recognized
+  
+- #(enh) - Add message parsers for Verilator and GCC errors and warnings
+
+------------------------------------------------------------------------------
+-- 1.6.9 Release --
+
+- #(enh) - Add a New Filelist wizard that supports creating a new argument
+  file -- either completely blank or pre-populated with existing source paths
+
+------------------------------------------------------------------------------
+-- 1.6.8 Release --
+- #(347) - Outline View: defparams not behaving correctly
+
+- #(322) Unhandled Exception: Unhandled expr in expr_to_string: NameMappedExp
+      Didn't fix this one, but hid the exception.  Outline view won't look 
+      complete, but basic data is there incase it is needed
+      TODO still in code, item not marked as fixed in bug tracker
+
+- #(nobug) - Enhance debug logging for declaration-lookup failures
+
+- #(enh) - Add NaturalDoc support for the Macro keyword. This allows macros 
+  to be documented
+  
+- #(enh - 96) - Update the hover popup to show multiple pieces of information
+  about the element that the mouse is over. Now, hover will show documentation 
+  (if present), declaration information, and allow the user to see the 
+  expansion of macros
+  
+- #(351) - Correct a parse error involving an initialization expression for 
+  a multi-dimensional associative array.
+  
+- #(322) - Remove a misleading error message that occurs due to unhandled
+  expression elements in expression-to-string conversion
+
+------------------------------------------------------------------------------
+-- 1.6.7 Release --
+
+- #(enh - 95) - Add support for opening the declaration of an element by 
+  double-clicking in the Outline view
+  
+- #(352) - Correct incorrect indentation after a randomize with {} block
+  
+- #(353) - Correct a bug when performing the Open Declaration operation on a
+  module port. Location information was not being applied to module ports
+
+- #(355) - Correct attribute-parse bug when attributes are applied to module ports 
+
+
+------------------------------------------------------------------------------
+-- 1.6.6 Release --
+
+- #(enh - 94) - Support reordering templates and files within the template editor
+
+- #(enh - 89) - Add support for folding block comments
+
+- #(344) - Correct property parse bug
+
+- #(340) - Correct property parse bug
+
+------------------------------------------------------------------------------
+-- 1.6.5 Release --
+
+- #(349) - Trial bug-fix for interoperability issue with revision-control plugins
+
+------------------------------------------------------------------------------
+-- 1.6.4 Release --
+
+- #(343) - Correct an issue where statements with an always_comb were being
+  displayed in the outline view.
+  
+- #(345) - Correct parse bug involving path-dependent specify-block paths
+
+- #(346) - Correct parse bug involving path-dependent specify-block paths
+
+- #(enh - 92) - Implement linking between editor and outline view. 
+
+------------------------------------------------------------------------------
+-- 1.6.3 Release --
+
+- #(337) - Update the SV Template Descriptor editor to properly work with
+  read-only files and revision-control plug-ins. Now, if a file is read-only,
+  the user will be prompted. 
+
+- #(339) - Correct a constraint-block parse error.
+
+- #(342) - Correct a parse error involving binding to an arrayed module instance
+
+- #(338) - Correct a parse error involving array-element references in a property
+
+
+------------------------------------------------------------------------------
+-- 1.6.2 Release --
+
+- #(nobug) - Correct a bug in recursive-inclusion handling
+
+- #(nobug) - Correct a spurious exception thrown when checking an invalid
+  include path
+  
+- #(336) - Correct a parse bug involving cycle delay (eg ##1)
+
+- #(enh - 93) - Add support for auto-folding tasks and functions
+
+------------------------------------------------------------------------------
+-- 1.6.1 Release --
+
+- #(nobug) Fixed always_latch default instantiation - added clk 
+
+- #(nobug) RemoveBlockComment (Ctrl+Shift+\) no longer needs to have 
+  anything selected to operate.  As long as the cursor is in a block comment
+  the comment will be removed.
+  
+- #(333) - Correct a bug involving auto-comment completion and files with
+  mixed line endings. 
+  
+- #(334) - Correct parse error involving transition-bin patterns
+
+- #(335) - Update content assist to use the same information provider that
+  the 'hover' in the editor uses. This supports more HTML markup (such as 
+  fixed-size fonts) than does the Eclipse default.
+
+-- 1.6.0 Release --
+
+- #(enh 31) - Allow projects to specify template paths via the project
+  properties dialog. 
+  
+- #(enh 329) - Add initial implementation of content assist for class-type
+  parameters in the template-instantiation wizard.
+
+-- 1.5.9 Release --
+
+- #(330) - Correct naming on 'New Package' wizard. The wizard was previously
+  titled 'New Interface' due to a cut/paste error
+  
+- #(nobug) - Change implementation of CTRL+/ for VHDL editor to be 
+  'Toggle Comment' rather than just 'Add Comment'
+
+- #(329) - Interim solution to this bug. Class-type template parameters 
+  are now treated as string-type parameters and can be edited 
+  
+- #(331) - Correct select-next-word behavior when using this action to
+  reduce the size of an existing selection
+  
+
+------------------------------------------------------------------------------
+
+-- 1.5.8 Release --
+
+- #(327) Indenter issue with assert statements
+
+- #(enh) Add beginnings of basic VHDL editing support
+  - Keyword, comment, and string coloring
+  - Block comment/un-comment (CTRL+/ ; CTRL+\)
+  - Matching-brace highlighting
+
+------------------------------------------------------------------------------
+
+-- 1.5.7 Release --
+
+- #(325) - Correct handling of escaped identifiers
+
+- #(321) - Corrected indentation of generate blocks
+- #(326) - Comments after assign statements incorrectly indented 
+- #(nobug) - Sorting out open & close brace indent on assign and other similar statements
+
+- #(nobug) - Correct a NPE in the StyledText label provider with assign statements
+
+------------------------------------------------------------------------------
+
+-- 1.5.6 Release --
+
+- #(nobug) - Correct a parse bug involving binsof expressions with
+  bin indexes
+
+- #(nobug) - Correct a bug involving relative include directives: 
+  `include "../../foo.svh"
+ 
+
+------------------------------------------------------------------------------
+-- 1.5.5 Release --
+
+- #(enh) - Add initial support for finding class extension references
+
+- #(enh) - Enhance hierarchy view to show the classes that extend the 
+  subject class
+
+
+------------------------------------------------------------------------------
+-- 1.5.4 Release --
+
+- #(nobug) - Correct an issue with the recently-added checker for unbalanced
+  pre-processor directives. This could cause expansion of a macro within an
+  enabled region to cause part of the pre-processor stack to incorrectly be cleared
+  
+- #(nobug) - Correct a parse bug involving hierarchical foreach loop variables
+
+- #(nobug) - Correct an issue with locating macros defined in previous files
+  when live-parsing a file that was processed in MFCU mode
+  
+
+------------------------------------------------------------------------------
+-- 1.5.3 Release --
+
+- #(nobug) - Correct a parse bug involving a function that returns a 
+  virtual interface handle
+  
+- #(316) - Correct a bug involving unbalanced pre-processor directives
+
+- #(enh) - Add checking for unbalanced pre-processor directives. Error
+  markers are now added when unbalanced directives are seen.
+
+- #(nobug) - Correct a parse bug involving an assert statement with a 
+  block body statement.
+ 
+- #(nobug) - Correct a parse bug involving a cast expression in a 
+  parameter assignment
+
+- #(nobug) - Correct a parse bug that prevented covergroup declaration
+  in a package scope
+  
+- #(nobug) - Correct a pre-processor bug that in some cases led to 
+  incorrect characters being included with a macro reference
+  
+- #(nobug) - Correct a parse bug that could cause variable declarations
+  of vectored user-defined types in behavioral scopes to be flagged as errors
+  
+- #(317) - Correct a parse conflict between a constraint set and a concat.
+  
+
+------------------------------------------------------------------------------
+-- 1.5.2 Release --
+
+- #(315) - Correct an issue with the task/function override-annotation
+  finding code. In some cases, virtual methods from classes declared in 
+  included files would be marked in the active source file.
+  
+- #(nobug) - Add compilation-argument import support for -mfcu option
+
+- #(enh) - During compilation-argument import, add support for executing
+  the commands being intercepted by the compiler wrappers. Sometimes a
+  compilation failure causes the entire process to terminate early.
+
+------------------------------------------------------------------------------
+-- 1.5.1 Release --
+
+- #(309) - Correct a NPE in the label provider when an unlabeled generate 
+  statement is inferred from a begin block within a generate block
+  
+- #(enh) - Add defparam statements to the Outline view
+
+- #(enh) - Add content assist support for parameters declared on the 
+  containing module
+  
+- #(enh) - Align content assist support for interface instantiation with
+  the support already present for module instantiation
+  
+- #(fr 86) - Enhance handling of undefined macros to reduce the number of
+  follow-on parse errors.
+  
+- #(312) - Correct a bug involving missing include files due to 
+  incompletely-specified include directories. Previously, editors would
+  still show the include files as missing even after correcting the include
+  directories. Now, the editors show correct information.
+  
+- #(314) - Allow module declarations without a terminating ';'. This appears
+  to occur when the module has a protected-content body.
+  
+------------------------------------------------------------------------------
+-- 1.5.0 Release --
+
+- #(enh) - Change content-assist label provider to display the type name of
+  built-in net proposals (eg wire[14:0])
+  
+- #(enh 80) - Add support for code completion of hierarchical references
+  that use macros. For example: `TOP.sub.signal
+  
+- #(306) - Corrected a bug involving auto-indent of code templates when 
+  preference settings cause spaces rather than tabs to be inserted.
+  
+- #(sr 10) - Add support for multiple content-assist contexts, which allows
+  code templates to be selected based on how the content begins as well as
+  the name associated with the code template. 
+
+- #(enh 68) - Added default code templates for some commonly used structures:
+   always_ff, always_latch, always_comb, if, else, do, while, for, case, casez, casex,
+   function, task, initial, final, assert
+
+------------------------------------------------------------------------------
+-- 1.4.9 Release --
+
+- #(298) - Correct a pre-processor bug involving comments inside a macro call
+
+- #(300) Natural Docs update -  Correctly handle (start code) ... (end) blocks in comments 
+
+- #(301) Leading white space at start of code section getting corrupted
+  
+- #(302) Bullets in pop-up help
+  
+- #(303) NDOC Parser - Links not showing up in summary table 
+ 
+------------------------------------------------------------------------------
+-- 1.4.8 Release --
+
+- #(292) - Property parser bug corrected
+
+- #(enh 81) - Add preference setting for how auto-reparse is done within the
+  active editor. If set to -1, re-parse is only performed when the file is
+  saved. Otherwise, the setting is a delay for how long to wait.
+
+- #(295) - Correct a parse bug in an associated-array initialization statement 
+  involving scoped identifiers. 
+  
+- #(291) - Correct an indexer crash when the argument file contains a directory
+  path rather than a file path. The indexer now ignores the directory path, and
+  the argument-file parser adds an error marker.
+  
+- #(293) - Correct block-comment colorizing in argument files
+
+- #(296) - Indenter behavior with "assert" and "randomize with" inconsistent 
+
+- #(297) - Correct a parse bug involving xor/or/and array-reduce methods
+
+------------------------------------------------------------------------------
+-- 1.4.7 Release --
+
+- #(enh) - Initial support for reference indexing and searching in an index
+
+- #(enh) - Add support for a Design Hierarchy view that shows the module
+  hierarchy of each project.
+  
+- #(enh) - Clean-ups to script launcher tab
+
+------------------------------------------------------------------------------
+-- 1.4.6 Release --
+
+- #(280) - Correct an issue with the order in which editors checked the type 
+  of the editor input. The fix results in improved support for nested projects
+  and linked resources, where the same physical resource may be linked into
+  multiple projects.
+  
+- #(enh - 70) - Add initial support for launching build scripts from SVEditor.
+  Error messages (currently, just Questa compilation messages) are recognized
+  and problem markers added.   
+
+- #(288) - Correct an issue with Next/Previous word selection when folding
+  is enabled. 
+
+------------------------------------------------------------------------------
+-- 1.4.5 Release --
+
+- #(enh) - Cause assign statements to show the relevant LHS and RHS expressions
+  in the Outline view
+  
+- #(enh) - Change content-assist proposal for name-mapped module-instance 
+  parameters. Now, a module-port proposal includes the parens and prompts the
+  user to specify the connected net.
+  
+- #(enh) - Add SVEDITOR as a built-in pre-processor directive. This can be
+  used to disable processing of code that the SVEditor parser does not 
+  currently support.
+  
+- #(nobug) - Corrected a bug where, in some cases, the types declared local
+  to the file being edited were not being searched during content-assist operations
+ 
+- #(enh) - Add content-assist support for task/function name-mapped parameters
+
+- #(enh) - Add content-assist support for name-mapped module, interface, and
+  class parameters.
+
+- #(285) - Correct a bug in the clocking block parser involving assertion 
+  items (eg property) declared within the clocking block.
+
+- #(284) - Ensure that 'pre-formatted' portions of NaturalDocs comments are
+  presented in fixed-width font in the doc hover
+  
+- #(286) - Correct a pre-processor issue with macros inside a string parameter
+  to a macro. For example:
+  
+  `ovm_info("id", $psprintf("Not a macro: `ovm_do"), OVM_MEDIUM);
+
+  The pre-processor should not expand `ovm_do, and now it does not.
+
+- #(287) - Add support for case inside statement, which allows value ranges
+  for case items.
+  
+  
+------------------------------------------------------------------------------
+-- 1.4.4 Release --
+
+- #(283) - Correct a case where a folded-by-default folding region was auto-folded
+  after pasting content into the region. 
+
+- #(nobug) - Ensure folding is only applied when the file is initially opened
+
+- #(78 - enh) - Add preference page to control folding
+
+- #(enh) - Add support for override annotations. Override annotations are displayed
+  next to tasks and functions that override a method from a super class. Hovering 
+  over the annotation displays information about the base method. Clicking on the
+  annotation navigates to the super method.
+
+------------------------------------------------------------------------------
+-- 1.4.3 Release --
+
+- #(282) - Remove the use of a Java 7 API (Character.isAlphabetic)
+
+------------------------------------------------------------------------------
+-- 1.4.2 Release --
+
+- #(nobug) - Corrected some instability in folding regions that could
+  cause folded regions to change their expanded state after modification
+  by the user.
+
+- #(enh) - Make 'unprocessed' regions (eg `ifdef UNDEFINED) collapsed
+  by default.
+
+
+------------------------------------------------------------------------------
+-- 1.4.1 Release --
+
+- #(nobug) - Corrected a Windows-specific issue with the Project variable 
+  provider used by the argument-file parser. With older (3.X) versions of
+  Eclipse, sometimes project variable paths were returned as /X:/... 
+  Now, these paths are properly transforms to X:/...
+  
+- #(281) - Change parser to accept data types as task/function arguments
+
+- #(nobug) - Correct an issue with linked resources that caused SVEditor
+  to not correlate files in a linked resource with their containing project.
+
+- #(enh) - Add an 'Executable' checkbox to the 'file' portion of the
+  template-descriptor editor to allow template files to be marked as 'executable'
+  
+- #(nobug) - Correct an issue with adding new parameters using the template
+  descriptor editor.
+
+- #(nobug) - Enable the template engine to correctly construct multiple
+  levels of directory hierarchy
+  
+- #(nobug) - Ensure template processor expands recursive variable references.
+
+
+------------------------------------------------------------------------------
+-- 1.4.0 Release --
+
+- #(enh) - Switch over to the 'new' indexer. The new indexer offers improved
+  performance and support for MFCU (multi-file compilation unit) indexing mode.
+
+- #(nobug) - Correct a pre-processor bug with the 'new' indexer that allowed
+  `__FILE and `__LINE macros to be expanded within a text region otherwise
+  disabled by `ifdef/`ifndef. This bug is typically observed as a parse-error
+  marker within a disabled region.
+  
+- #(nobug) - Ensure that include-file content assist works for files not
+  associated with an index.
+
+- #(nobug) - Convert a couple of pre-processor error messages to markers.
+
+- #(nobug) - Correct a content assist error related to a null-pointer 
+  exception on UVM macro vs enumerator.
+
+- #(279) - Fix indenting when a vector is placed in a case statement 
+     case (some_sig[3:2]) <- this was causing indenter to get confused
+     
+------------------------------------------------------------------------------
+-- 1.3.9 Release --
+
+- #(nobug) - Correct a bug in the argument-file document partitioner that
+  caused incorrect completions to be returned in some cases when no
+  leaf element was supplied. For example: ${workspace_loc}/
+  
+- #(enh) - Add argument-file content assist support for projects in the
+  workspace. Now, requesting content assist for ${workspace_loc}/ returns
+  a list of projects in the workspace.
+  
+- #(enh 74) - Remove `ifndef guards from standard and methodlogy templates
+
+- #(nobug) - Re-enable Open Declaration and content assist for macros
+  in the 'new' indexer
+  
+- #(nobug) - Correct an issue with include-file caching in the 'new' index,
+  where include files with a common leaf element would match. For example,
+  my_cls.svh would be used when the actual include was cls.svh. 
+  
+- #(nobug) - Allow generate statements to include task calls. Task calls 
+  are used in some cases to force errors in case of faulty elaboration
+  
+- #(nobug) - Add back support for -y (libdir) and -l (libfile) to the
+  'new' index in both SFCU and MFCU mode
+  
+- #(278) - Correct an issue with auto-indent around if/else blocks without
+  begin/end  
+  
+- #(276) - Clean up some debug messages displayed on the console
+
+------------------------------------------------------------------------------
+-- 1.3.8 Release --
+
+- #(nobug) - Correct an issue with the 'new' index and incremental parsing.
+  In some cases, macros from cached include files were not found. 
+  
+- #(nobug) - Correct an issue that could cause compilation-argument import
+  to fail on Unix due to wrapper scripts having Windows-style line endings.
+  Now, line endings are correctly converted.
+
+------------------------------------------------------------------------------
+-- 1.3.7 Release --
+
+- #(274) - Correct an issue with brace matching in the presence of escaped
+  double quotes within strings (eg "this is a \" string")
+  
+- #(nobug) - Correct an issue with the content assist provider that caused
+  non-class proposals to be given for class 'extends'
+
+- #(enh) - Add initial macro-caching scheme to the 'new' indexer to prevent
+  include files from being repeatedly processed. In the new scheme,
+  after initial processing of an include file, subsequent inclusions of 
+  that file simply bring in the macros previously defined.
+  
+- #(nobug) - Correct a line-number issue with the 'new' index. `ifdef/`ifndef
+  directives caused the line number to incorrectly be incremented  
+  
+- #(275) - Add support for the '-sv' and '-sverilog' switches to force all 
+  files in the argument-file tree to be processed as SystemVerilog files.
+
+------------------------------------------------------------------------------
+-- 1.3.6 Release --
+
+- #(272) - Update bracket-matching behavior to match JDT's behavior. 
+
+- #(nobug) - Corrected an issue with the code that annotates spell-check
+  markers that could cause other annotations to be removed
+  
+- #(72:enh) - Added support for shading code regions disabled by a 
+  preprocessor ifdef/ifndef directive. The new support is enabled
+  for the 'new' indexer and for files not part of an index
+  
+- #(71:enh) - Add initial support for code folding. Classes, modules,
+  interfaces, packages, tasks, and functions, and constraint blocks
+  can be folded.
+
+------------------------------------------------------------------------------
+-- 1.3.5 Release --
+
+- #(nobug) - Correct a class-cast exception from the argument file 
+  outline view
+
+------------------------------------------------------------------------------
+-- 1.3.4 Release --
+
+- #(268) - Correct a thread-access issue involving the editor and Eclipse's
+  isPartVisible() method. 
+  
+- #(ehh) - Enhance the argument-file outline view with double-click navigation
+  to file paths specified in the argument file.
+  
+- #(nobug) - Correct a new-indexer bug involving over-aggressive caching of
+  non-root objects.
+  
+- #(269) - Correct an specification error in the definition of the annotation
+  marker that caused the Annotations preference page to not display. Turns 
+  out that the 'label' property really is required (despite not being labeled as such)
+
+- #(nobug) - Correct a bug with the 'new' argument file parser that could lead
+  to include directories incorrectly being marked as 'missing'
+  
+- #(nobug) - Correct a bug in the 'new' indexer that caused some cached items
+  to not be resolved back to their actual items. This could result in NPEs
+  when performing content-assist or open declaration operations
+  
+- #(enh) - Add index-performance debug output for the 'new' index. This
+  output is displayed at 'Minimum' debug level after a full rebuild and
+  gives some statistics on how many source files and lines were processed,
+  and how long each operation phase took.
+  
+- #(enh) - More changes to better-integrate with the Eclipse builder 
+  to filter out redundant build requests and wait until post-import
+  refresh is complete before kicking off index builds.
+  
+- #(nobug) - Correct an issue with the 'new' indexer that caused some items
+  declared by `included files to be shown in the Outline view of the 
+  active file. Items declared in `included files are now filtered out of the
+  outline view.
+  
+- #(271) - Correct a longstanding bug in the bracket-matching code related
+  to bracket characters in comments. The bracket-matching code now uses
+  the same comment-region-aware scanner used by the content-assist utilities
+
+------------------------------------------------------------------------------
+-- 1.3.3 Release --
+
+- #(nobug) - Correct a windows-specific hang that could occur during file
+  pre-processing when Java throws an exception rather than returning a
+  'no data available' return code from the read() method
+  
+
+------------------------------------------------------------------------------
+-- 1.3.2 Release --
+
+- #(nobug) - Correct a bug in the build procedure that could cause the
+  template-engine plugins to be deployed without any .class files. 
+
+------------------------------------------------------------------------------
+-- 1.3.1 Release --
+
+- #(267) - Add logic to the spelling reconciler to check for null handles
+  returned from the annotation model, and deal gracefully with that.
+  
+- #(nobug) - Correct an issue with the 'new' index where content from a
+  macro expansion had no file ID
+  
+- #(enh) - Add 'Include Hierarchy' element to the outline view of the argument file
+  editor. As with the 'Include Hierarchy' element in the SV editor outline view,
+  this shows the include path back to the root argument file. 
+  Note: this is only enabled for the 'new' argument-file index
+  
+- #(nobug) - New index: ensure .svproject file is re-read after project import
+  if project data was incorrectly creasted prior to existence of .svproject file.
+
+------------------------------------------------------------------------------
+-- 1.3.0 Release --
+
+- #(266) - Correct parse error with |-> property expression
+
+------------------------------------------------------------------------------
+-- 1.2.9 Release --
+
+- #(nobug) - Enable non-ANSI portlist declarations to end with ','. For example:
+  module (a, b,);
+  endmodule
+  
+- #(enh) - Add .flist as a recognized extension for an argument file
+
+- #(enh) - Enable argument-file editor to open verilog source-library files.
+  For example: -v <file>
+
+- #(nobug) - Correct an issue with the new indexer and verilog source-library files
+
+- #(nobug) - Correct an issue with a SV keyword (context) being incorrectly
+  recognized as a variable modifier when used in a Verilog context.
+  
+- #(enh) - Update the editor to react to rebuilds of its index by re-parsing. This
+  ensures that markers are updated, etc
+ 
+- #(enh) - Add 'Include Hierarchy' element to outline view (.testing release ONLY).
+  This allows the user to trace how the active file is included in compilation
+  
+- #(enh) - More reliable support for detecting project import/open and 
+  kicking off an index operation for the newly-available project
+  
+- #(nobug) - Correct a constraint-parse error involving an implication
+  constraint: (expr) -> foreach
+  
+- #(265) - Correct a bug with word highlighting of words containing regular-expression 
+  special characters due to a change in behavior with new Eclipse versions.
+
+------------------------------------------------------------------------------
+-- 1.2.8 Release --
+
+- #(260) - Correct an issue that caused certain operators to not be correctly
+  colored in the editor. Due to history, operator lists were stored in different
+  places in the code. Now, all operators are listed in the SVOperators class.
+  
+- #(nobug) - Correct an off-by-one line numbering issue with the Argument File
+  editor. This issue caused errors to be annotated one line off from where
+  they should have been positioned.
+  
+- #(enh) - Enhance argument-file editor to react to resource-variable changes.
+
+- #(nobug) - Correct a build issue with 1.2.7 that caused the 
+  template-instantiation wizard to not load.
+  
+- #(enh) - Enhance support for editing files that are not part of an index,
+  but are inside a project where indexed files are configured. This often 
+  happens, for example, when a new file is added to a project. With the
+  enhancements, macro definitions are pulled from the project's index.
+  
+- #(264) - Correct a bug involving selected-word highlighting for words
+  containing regular-expression characters
+
+- #(261) - Correct a bug involving first_match in an assertion
+
+- #(262) - Correct a bug involving 'within' used within an assertion
+
+------------------------------------------------------------------------------
+-- 1.2.7 Release --
+
+- #(127) - Correct a parse bug involving a package-qualified 
+  parameterized-class type reference (uvm_pkg::uvm_resource_db #(type)::set)
+  
+- #(259) - Spurious parser error with inout in clocking block
+
+- #(nobug) - Correct issues with specifying argument files relative to
+  ${project_loc}.
+   
+------------------------------------------------------------------------------
+-- 1.2.6 Release --
+
+- #(nobug) - A few required patch-ups due to the plug-in reorganization. 
+  The SVT editor now properly displays its icon, and PNG images are 
+  now properly exported to the help area.
+
+- #(enh) - Template parameter references (ie ${my_parameter}) in SV 
+  files are now colorized.
+  
+
+------------------------------------------------------------------------------
+-- 1.2.5 Release --
+
+- #(enh) - Update SV editor to display a decorated icon for files that are
+  part of an index. 
+
+- #(253) - Change index to detect the language variant used in a file based 
+  on its extension. .v, .vl, and .vlog are considered to be Verilog 2005 files,
+  while the remainder are considered to be SystemVerilog files.
+  
+- #(enh) - Add support for running JavaScript extension scripts from 
+  within SVE. There is now a launch configuration where a script and
+  arguments can be specified.  
+  
+- #(nobug) - Change 'shadow' index such that errors are not propagated
+  to the filesystem. Previously, propagating markers made it appear
+  that SVEditor was managing a file, while in reality it wasn't
+  
+- #(258) - Added an exception to allow parens around a dist statement.
+  This isn't LRM-compliant, but some simulators appear to support it.
+
+------------------------------------------------------------------------------
+-- 1.2.4 Release --
+
+- #(254) - Correct issue with spell-checker when SVEditor is installed in an
+  Eclipse installation without a built-in spellcheck engine. Added a specific
+  spellcheck engine for SVEditor.
+
+------------------------------------------------------------------------------
+-- 1.2.3 Release --
+
+- #(64) Indenter import `include / import statements not lined up
+
+- #(nobug) - Changes the 'Add Project Path' option to specify a 
+  project-relative path (${project_loc}) rather than a workspace-relative path
+  
+- #(enh) - Adds in-editor hyperlink mechanism similar to that in JDT. Only enabled for 
+  classes. Ctrl+MouseOver a class name, and it becomes hyperlinked with an option to 
+  open the declaration or hierarchy. Can be enabled/disabled in the general text 
+  editor properties under hyperlinking.
+  
+- #(65) - Add spell checking for comments in SV files
+
+- #(enh) - Update template wizard to support NaturalDoc formatting for
+  template-element descriptions
+  
+- #(251) - Corrected a parse bug involving using 'super' or 'this' 
+  as the root element in a delay expression  
+
+- #(252) - Correct a parse bug involving lists of continuous assigns
+
+- #(nobug) Indenter update.  Modified multi-line statements indent, so that lines  
+  after first line are indented.
+  
+- #(nobug) Indenter update.  Modified multi-line statements indent, so that lines  
+  after first line are indented.
+  
+- #(nobug) Indenter update.  Make multi-line if statements indent more like 
+  java (which also has problems).  Still a bit of an issue to sort out here, 
+  typing doesn't behave the same as when you have the indenter re-format your 
+  code.  Need to figure that out.
+
+------------------------------------------------------------------------------
+-- 1.2.2 Release --
+
+- #(nobug) - Updates to indenter for covegroups / points with lots of {}
+
+- #(enh) - Add new filters for the Import Compilation Arguments wizard:
+  - Filter duplicate options/paths
+  - Organize options before paths
+
+- #(nobug) - Correct a parse error involving multi-step transition bins. 
+  For example: (0,1,2 => 1,2,3 => 2,3,4)
+  
+- #(enh) - Update Compilation Argument Import wizard to enable 
+  automatic addition of the new argument file to the containing 
+  project's settings
+
+
+------------------------------------------------------------------------------
+-- 1.2.1 Release --
+
+- #(nobug) - Ensure new compilation-wrapper scripts are included in the release
+
+------------------------------------------------------------------------------
+-- 1.2.0 Release --
+
+- #(nobug) - Correct parse error with named-mapped parameters to
+  class type in function call. Eg: foo = my_class #(.A(5), .B(int))::type_id::create();
+  
+- #(nobug) - Correct issue with the argument-file parser that caused unrecognized
+  plusargs (eg +my_plusarg) to be treated as a single-argument option. This
+  caused the argument following the plusarg to be ignored
+
+- #(nobug) - Enhance argument-file parser to support multi-path incdir directives. 
+  For example: +incdir+../mydir1+../mydir2+../mydir3
+  
+- #(enh) - Add wizard and scripts to create an argument file by running 
+  compilation and capturing the arguments passed to standard compilers
+  (vlog, ncvlog, vcs, iverilog)
+  
+
+------------------------------------------------------------------------------
+-- 1.1.9 Release --
+
+- #(nobug) - Correct an argument-file content assist issue involving +plusarg=<>. 
+
+- #(enh) - Update NaturalDocs to recognize Constraint, Covergroup, and 
+  Coverpoint keywords  
+  
+- #(enh) - Add NaturalDocs info (if available) to the side of content-assist proposals
+
+- #(nobug) - Correct issue with navigation/doc hover on type expressions of the form:
+  <type>::<method>::<method>()
+  
+  The root type is now properly resolved
+  
+- #(56) - Correct an issue with auto-indent and files with Windows-style line endings  
+
+- #(nobug) Added operators: "--", "++", "~&", "~|"
+
+- #(nobug) Updated SVCodeScanner to recognize that "?" is also a valid operator character
+
+- #(nobug) Covergroup <name> with function sample was creating errors, and 
+  cratering the file in progress.  Modification done to run to end of line, 
+  and treat as a normal, simple covergroup.
+           
+- #(165)   Outline view does not jump when selecting primitives
+
+- #(170)   Outline view does not jump when selecting properties
+
+- #(nobug) Fixed auto-indenter surrounding @(...); inside an initial block
+
+- #(nobug) Fixed auto-indenter casez and casex not handled
+    
+- #(247) - Support this case (if (a inside b)) as a non-LRM-compliant case. Added an extensible
+  preference scheme to allow the user to selectively enable non-LRM cases.
+
+------------------------------------------------------------------------------
+-- 1.1.8 Release --
+
+- #(58) Colorizer: Add different colors for braces 
+
+- #(51) Colorizer: Add colorization of numbers
+
+- #(nobug) Colorizer: Add colorization of operators
+
+- #(246) - Resolve a deadlock involving cache invalidate during index rebuild
+
+- #(nobug) - Correct an issue with behavioral @(*) statements
+
+- #(nobug) - Enhance type search during content assist and navigation to
+  include the scope in which the target variable/field is declared
+
+------------------------------------------------------------------------------
+-- 1.1.7 Release --
+
+- #(199) - Correct unusual unindenting behaviour when spaces-for-tabs enabled
+
+- #(nobug) - Made some improvements to the "Refresh Index" status bar... now does more than
+             2 or 3 steps.  Still some work to do but better than it was.
+
+------------------------------------------------------------------------------
+-- 1.1.6 Release --
+
+- #(nobug) - Correct a thread deadlock related to indexing and other threads
+
+------------------------------------------------------------------------------
+-- 1.1.5 Release --
+
+- #(nobug) - Correct a recently-introduced bug that prevented the project 
+  path settings from being taken back to their defaults (ie remove all file paths)
+  
+- #(nobug) - Correct an issue that caused files that were not handled by an 
+  index but were opened by an editor to be shown as 'indexed' in the project
+  explorer. These files are now shown as 'not indexed' (ie no blue dot)
+  
+- #(nobug) - Correct an issue preventing argument files not associated with
+  project settings from providing project-variable content-assist proposals
+
+- #(nobug) - Correct a bug with assignment content assist. Now, content assist
+  works with part-select of LHS: my_var[3:0] = <ASSIST>
+
+- #(229) - Detect project close and remove associated indexes.
+
+- #(enh) - Add support for the argument file -F switch. This switch includes
+  an argument file, just as the -f switch does. However, file paths within 
+  the included argument file are resolved relative to the directory containing
+  the included argument file.
+
+------------------------------------------------------------------------------
+-- 1.1.4 Release --
+
+
+- #(240) Block Comment Behavior results in nested block comments
+
+- #(nobug) - Boost performance of macro processing when many macros are
+  referenced.
+  
+- #(enh) - Add the following file extensions to the recognized set:
+  .vh, .vp, .vs, .svp, .svi, .v95, .v95p  
+  
+- #(241) - Resolve 'Resource Closed' exceptions from the decorators that
+  add indexed and error annotations to files in the project explorer.
+
+
+------------------------------------------------------------------------------
+-- 1.1.3 Release --
+
+- #(nobug) - Filter content-assist proposals for super- tasks/functions 
+  from content proposals
+
+- #(enh) - Content assist: add containing-class information for variable
+  proposals when available and appropriate.
+  
+- #(enh) - Add code structure-aware content assist proposal ordering. 
+  This causes proposals from the current class, for example, to be
+  presented ahead of other matches from a super class.
+
+------------------------------------------------------------------------------
+-- 1.1.2 Release --
+
+- #(nobug) - Correct issue with Open Declaration in an argument file
+  when the path extends to the end of the file.
+  
+- #(nobug) - Correct a content-assist bug involving content post-!=
+
+- #(nobug) - Update quick-view shortcuts to be function in all
+  content regions -- code, comment, etc
+
+------------------------------------------------------------------------------
+-- 1.1.1 Release --
+
+- #(nobug) - Overly-aggressive ignore pattern in .gitignore prevented an
+  icon from being committed. Add missing icon and correct .gitignore
+  
+- #(nobug) - Correct ArgFile content-assist issue when cursor is 
+  placed at the very end of the file.
+
+------------------------------------------------------------------------------
+-- 1.1.0 Release --
+
+- #(enh) Add outline view for the ArgFile editor
+
+- #(enh) Add content assist for the ArgFile editor
+  - Content assist is provided for path references (both directory and file)
+  - Content assist is provided for variable references
+
+
+------------------------------------------------------------------------------
+-- 1.0.9 Release --
+
+- #(enh) - Major update to support for argument files. Argument files are
+  now treated as first-class members of the index subsystem, enabling
+  tracking of errors from argument files. The argument-file editor 
+  now parses the argument file to show missing-file paths on-the-fly. 
+  The editor also supports navigation to referenced file paths.
+
+- #(enh) - Argument-File Index now adds errors for missing root argument files
+  to the project on which they are specified.
+  
+- #(enh) - Initial work on argument-file parse and error propagation
+
+- #(enh) - Add Open Declaration support to the Arg-File editor.
+
+------------------------------------------------------------------------------
+-- 1.0.8 Release --
+
+- #(nobug) - Add support for assertion unary 'not'
+
+- #(3597783) - Correct issues with UVM Agent template
+
+- #(enh) - Update indexed-files decorator to decorate folders containing
+  indexed files as well. This should make it easier to understand
+  which files are being indexed.
+  
+- #(nobug) - Remove a stack-trace print that occurred when an expression
+  traversal failed. Convert to a debug message.  
+  
+- #(3148929) - .svproject files are now only created when the content
+  is different than the default content.
+
+------------------------------------------------------------------------------
+-- 1.0.7 Release --
+
+- #(enh) - Enable template files to be described as 'executable'
+
+- #(nobug) - Correct another template variable-expansion corner case involving
+  nested bracketed variables: ${${MY_TEMPLATE_VAR}}
+  
+- #(nobug) - Correct a null-pointer-exception that occasionally occurred 
+  when the editor was first opened.   
+
+- #(nobug) - Resolve ambiguity between 'unique' used as a keyword, and 
+  'unique' used as a built-in function
+  
+- #(nobug) - Add support for unique0 keyword
+
+------------------------------------------------------------------------------
+-- 1.0.6 Release --
+
+- #(nobug) - Correct a parse error involving sized enum-variable types. 
+  For example: my_enum_type [3:2] enum_var;
+  
+- #(nobug) - Correct an issue with the template processor that prevented
+  substitution of variables in some cases where the value will be used 
+  as a variable. For example, in a PERL script:
+  $${MY_VAR_NAME} = $ENV{${MY_VAR_NAME}}
+
+- #(3482275) - Implement highlighting of matching words in the document. 
+  The implementation is pretty basic, and simply highlights all matching
+  words to the selected word regardless of the context of the matching
+  word.
+
+------------------------------------------------------------------------------
+-- 1.0.5 Release --
+
+- #(nobug) - Correct a keyword conflict on the 'unique' keyword. It should be 
+  treated as a keyword in a constraint context, but as an identifier elsewhere.
+  
+- #(nobug) - Correct a parse bug involving empty case items
+
+- #(3591399) - Parser error - Null-Pointer-Exception involving generate-if statements
+
+- #(nobug) - Enable enums and unions to be declared in behavioral blocks (eg tasks)
+
+- #(nobug) - Correct a parse error with referencing a const field in a 
+  parameterized class. For example: a = pkg::cls#(mytype)::const_value;
+  
+- #(nobug) - Correct pre-processor issue involving macro references with
+  the opening paren of the argument list being placed on a new line. For example:
+  `my_macro
+    (
+      ARG1, ARG2,
+      ARG3
+    )
+
+- #(nobug) - Add support for anonymous-type forward declarations. For example:
+  typedef my_fwd_decl;
+  
+------------------------------------------------------------------------------
+-- 1.0.4 Release --
+
+- #(3566347) - Tab behavior when pasting code, which is auto-indented
+
+- #(3587919) - Correct issue with pre-processor interpreting parens in quoted strings
+
+- #(nobug) - Correct an issue with naming of the plugin lib index, which prevents
+  multiple instances from accumulating
+  
+- #(nobug) - Correct a parse bug with event activation with a repeat (->> repeat(10)...)
+
+- #(nobug) - Correct a pre-processor issue that caused problems with a 
+  concatenation expression
+
+- #(nobug) Capture names of for loops in generate blocks if given
+
+- #(3588993) - Correct bug involving outline view incorrectly setting the 
+  selection in the editor after an editor change.
+  
+- #(3588757) - Update lexer to support multiple contexts. This is the first
+  step toward supporting multiple language variants.
+  
+- #(nobug) - Enhance auto-indenter to support generate blocks
+
+------------------------------------------------------------------------------
+-- 1.0.3 Release --
+
+- #(3552370) - Parse error when using a named-parameter reference within an assert statement
+
+- #(3554653) - Correct bug preventing global/package variable declarations from appearing in 
+  content-assist results
+  
+- #(3573724) - Correct 'Content Assist Shows Blank Item' issue. ModuleInst items were
+  being added to the proposal list in addition to ModuleInstItem items.
+  
+- #(3582495) - Correct bug in the pre-processor's handling of recursively-included files
+
+- #(nobug) Outline View Updates:
+      - Added icon for assertions in outline view - currently using Property icon, which is what
+           we use for the filter in the Outline view
+      - Updated names of generate, generate for and generate_if blocks to outline view
+
+- #(3566347) Tab behavior when pasting code, which is auto-indented
+   Generally cleaned up some of the auto-indenter behavior
+
+-- 1.0.3 Release --
+- #(nobug) - Outline view button fixup, the default states of buttons weren't being
+  correctly on some buttons
+
+- #(nobug) - Captured names of generate statements if they are there.  This will make 
+  generate statements in the outline view more useful.
+
+------------------------------------------------------------------------------
+-- 1.0.2 Release --
+
+- #(nobug) - Improve performance of pre-processor when files contain many
+  references to undefined macros.
+  
+- #(3554076) - Correct parsing of specify-if statements
+
+------------------------------------------------------------------------------
+-- 1.0.1 Release --
+
+- #(nobug) - Correct a couple of places where paths were not being correctly
+  normalized (back-slashes converted to forward slashes). This resulted in 
+  some problems on the Windows platform.
+  
+- #(3579865) - Corrected a parse bug involving clocking blocks
+
+------------------------------------------------------------------------------
+-- 1.0.0 Release --
+- #(enh) - Add Open Type dialog to assist in quickly and easily navigating 
+  to an arbitrary type
+  
+- #(enh) - Change Objects Quick View to use Hover colors. This makes things
+  look better on Ubuntu 12.04
+
+- #(3554883) - Correct bug with Doc Hover not finding doc comment for 
+  a parameterized class.
+
+- #(enh) - Add decorators to files in the Project Explorer that reflect whether
+  a file is managed by the index in the containing project. This can be 
+  helpful in troubleshooting index configuration.
+  
+- #(3566435) - Change log-output scheme to, by default, output only to the
+  logfile. Also change output to the console to only be from a single thread
+  
+- #(3566723) - Convert Doc Hover error to a debug message
+
+- #(3566760) - Change SVEditor console to not auto-raise on output.
+
+- #(3566727) - Correct Literal decimal 'X' not supported
+
+- #(3566417) - Correct a bug with macro default parameters
+
+- #(enh) Added additional filters to outline view
+         - CoverPoint/Group/Cross/Bins
+         - Assertion/Property/Seuqnces
+         - Constraints
+         - Enum/Typedef
+
+- #(3566419) - Correct stack overflow with recursive macro references
+
+- #(3566786) - Correct issue where index does not react to a change in the 
+  global definition set
+ 
+- #(nobug) - Correct a bug in the Source Collection dialog that prevented 
+  users from changing the default file extensions
+  
+- #(nobug) - Correct issues with content assist for types and enumerators 
+  in the package and class scopes
+  
+- #(nobug) - Correct a bug that prevented class parameters from being
+  presented as content-assist proposals  
+
+- #(enh) - Add missing system tasks: $time, $realtime, $urandom, $urandom_range
+
+- #(3571086) - Limit maximum errors per file. Currently, error limit is 
+  hard-coded to 100
+  
+- Update SVEditor Project Properties to place Library Path and Source Collection
+  methods of specifying index paths on a new Deprecated tab. These methods of
+  specifying index paths will gradually be removed. New development will focus
+  on the Argument File method of index specification.
+  
+------------------------------------------------------------------------------
+-- 0.9.9 Release --
+
+- #(nobug) - Enhance doc-comment finder to recurse through pre-processor file
+  scopes (eg `ifdef scope) to locate doc comments.
+
+- #(enh) - New Class wizard and Override Method wizard now add NaturalDoc
+  comments.
+
+- #(nobug) - Fix a bug in the expression scanner (used for open declaration,
+  doc hover, etc) involving expressions next to operators such as parens:
+  "(get_name(), " for example. Now the identifiers are correctly located
+  even when the cursor is at the beginning of the name.
+
+- #(3561911) - Correct Doc Hover removes links. Links in NaturalDocs comments
+  are now replaced with plaintext.
+  
+- #(3561910) - Correct issue where doc-comment parser was being too aggressive
+  in removing what appeared to be vertical lines.
+
+- #(enh) - Add new-file wizards for module, interface, and package.
+
+- #(3561934) - Add support for Doc Comment 'Interface' and 'Module' topics
+
+- #(3562206) - Disable excessive debug output from comment parser
+  
+------------------------------------------------------------------------------
+-- 0.9.8 Release --
+
+- #(nobug) - Improve doc-comment stripping to support multi-line comments
+
+- #(nobug) - Update SVEditor to correctly provide the 'live' pre-processor
+  view for the doc-comment hover
+  
+- #(nobug) - Fixes to lookup functionality underlying content assist to 
+  correctly search up past single-statement behavioral scopes, such as
+  if and while.
+  
+- #(nobug) - Correct content-assist problem inside do/while blocks. Since
+  a content-assist scenario typically results in a temporary syntax error,
+  the do/while block was not being added to the AST.
+  
+- #(nobug) - Correct sorting regression in the Override Methods dialog. 
+  Now, classes are properly sorted by inheritance order.
+
+- #(nobug) - Correct issues with Module Hierarchy view. Now module 
+  hierarchy is properly displayed and elements of module instances are
+  displayed correctly.
+  
+- #(nobug) - Correct an issue with the class-browse functionality of
+  the New Class wizard. A class-cast exception was thrown due to changes
+  in the SVEditor database.
+  
+- #(enh) - Add double-click handler for New Class wizard. This reduces 
+  the number of mouse clicks required to create a new class.
+
+- #(nobug) - Support array-type parameters for task/function override.
+
+- #(nobug) - Update content assist to filter out task/function proposals
+  from super classes.
+
+------------------------------------------------------------------------------
+-- 0.9.7 Release --
+
+- #(3558622) - Correct const-cast and integer-cast parse errors
+
+- #(3558008) - Correct bug involving conflict between workspace/filesystem paths.
+
+- #(nobug) - Explicitly set hover foreground/background to avoid Ubuntu
+  12.04 ugliness (black background / white foreground)
+  
+
+------------------------------------------------------------------------------
+-- 0.9.6 Release --
+
+- #(enh) - Enhance content assist to only show static/non-static fields based
+  on preceeding expression (ie <expr>.<<CA_TRIGGER>> only shows non-static fields)
+  
+- #(enh) - Enhance class-extension content assist to only return class proposals
+
+- #(3545640) - Add support for macros with default-value parameters
+
+- #(nobug) - Correct name-matching issue with content assist for ports in the
+  current module/interface
+  
+- #(3553812) - Add basic support for content assist of parameterized types
+
+- #(enh) - Generated documentation now opened within Eclipse
+
+- #(enh) - Support for definition lists in the documentation comments
+
+- #(enh) - Documentation comments now displayed when hovering a reference
+  to the element
+
+- #(3554595) - Correct a bug in the editor-specific index iterator that, 
+  in some cases, prevented content assist and open declaration from working
+  on declarations within the file.
+
+- #(enh) - Move clear portion of index rebuild into the main portion
+  of the rebuild thread
+
+- #(enh) - Make index-cache clearing an asynchronous operation
+
+- #(enh) - Add a preference to switch between using the browser widget
+  for hover information and using the default hover widget. For some reason,
+  there appear to be problems with the browser widget on Ubuntu 12.04
+
+- #(nobug) - Correct code generator for method override to correctly generate
+  vectored parameters
+
+- #(enh) - Add support for content assist through class-local typedefs. 
+
+- #(3558081) - Correct an issue with space between ` and a macro name (eg ` MY_MACRO).
+
+- #(nobug) - Correct an issue with incomplete macro reference on its own line (eg ` ).
+
+------------------------------------------------------------------------------
+-- 0.9.5 Release --
+
+- #(nobug) - Correct a bug in the package cache that caused only declarations
+  from first-level include files from being processed
+  
+- #(nobug) - Correct a string out-of-bounds when parsing a file with incomplete 
+  `include directives
+  
+- #(nobug) - Correct a parse bug when attempting to parse a partial 
+  pre-processor declaration (eg `)
+  
+- #(nobug) - Correct a NPE from the label provider when displaying a function 
+  with no type
+  
+- #(enh) - Implement content-assist for interface fields referenced via a virtual interface field. 
+
+- #(enh) - Add basic timeout support for content assist. 
+
+- #(enh) - Add content assist for fields of interface-type module items
+
+- #(enh) - Add content assist for modports of interface-type items
+
+- #(enh) - Add double-click support to the path browsers for project-paths setup
+
+- #(enh) - Add content assist for ports of interface-type items
+
+- #(enh) - Add content assist for hierarchical module paths
+
+- #(3547768) - Normalize paths to avoid cross-platform issues
+
+- #(enh) - Add content assist for modport-type module ports
+
+- #(nobug) - Correct an issue with requesting content-assist at the very
+  end of a file. For me, this often resulted in receiving incorrect 
+  content suggestions for super classes
+
+  
+------------------------------------------------------------------------------
+-- 0.9.4 Release --
+
+- #(nobug) - Correct an issue with the package cache not restoring
+  the filename after a restart.
+  
+- #(enh) - 
+
+- #(enh) - A package can now be displayed in the Class Diagram view. All classes
+  declared within the package are shown, along with relationships between the 
+  classes.
+- #(enh) - Adds ability to create new class diagram by right clicking on class in existing diagram.
+
+- #(enh) - Adds enhancements to class selection in diagram. It should now be clear to the user what 
+  is selected, and the selection can be cleared by clicking the background.
+ 
+- #(3536166) - Trim leading/trailing spaces from template file paths 
+
+- #(3536752) - Correct non-blocking event-trigger operator (--> to ->>)
+
+- #(3536783) - Correct parse bug involving an 'if' in a property statement
+
+- #(enh) - Parser structure changes and enhancements to the cache subsystem boost the
+  overall parse performance by 4-5x on sizeable parsing jobs
+
+------------------------------------------------------------------------------
+-- 0.9.3 Release --
+
+Note: This release requires the Eclipse Zest feature. Users of the
+ SVE 1.0 application will need to manually add the update site
+ http://download.eclipse.org/releases/indigo before installing 0.9.3.
+ SVE 1.1 will contain the Zest feature by default.
+
+- #(nobug) - Correct NPE when opening an object from the Objects view.
+
+- #(enh) - Outline quick view, activated by CTRL+o in the editor. Provides
+  a quick way to navigate within the current file
+
+- #(nobug) - Fix a bug with enumerator content assist from enum types 
+  declared within the current file scope
+
+- #(ehh) - UML Diagram view added. The view is opened by selected a class
+  and selecting 'Open Class Diagram' from the context menu, or CTRL+SHIFT+D.
+
+- #(enh) - Implement findPackageDecl API that provides a complete view 
+  of a package and the contents, included contents contributed by included files  
+  
+------------------------------------------------------------------------------
+-- 0.9.2 Release --
+
+- #(3531462) - Correct parse error involving parameterized-type static call
+  with no parameter-values specified
+  
+- #(nobug) - Change handling of shadow index, so not stored in registry.
+
+- #(nobug) - Change handling of index config to identify requests for an index
+  from the registry that match base location, project, and type but differ in
+  the configuration. These indexes are now disposed and a new index created.
+  
+- #(enh) - Add support for showing the files managed by an index in the 
+  project explorer view. This should be helpful when debugging index issues
+  
+- #(3532307) - Add sorter to the Template Category pane in the New Template
+  wizard
+  
+- #(3532303) - Update the template engine to support output files with 
+  directory hierarchy (eg filename="subdir/${name}_file.svh")
+  
+- #(3452774) - Add content-assist support for enumerators
+
+- #(enh) - 'Objects' view added. This contains a list of modules, interfaces,
+  and packages declared within the active projects in the workspace
+ 
+ - #(enh) - 'Objects' quick view, activated by CTRL+SHIFT+o in the editor. 
+   provides a quick way to navigate to other type declarations
+
+------------------------------------------------------------------------------
+-- 0.9.1 Release --
+
+- #(enh) - Add preference page for specifying global template parameters. These
+  can be used to customize the ${file_header} and ${file_footer} template parameters
+  
+- #(enh) - Add ${user} and ${date} built-in template parameters
+  
+- #(enh) - Add ${file_footer} entries to UVM template files
+
+- #(enh) - Add a trivially-simple editor for argument files (.f files). At the 
+  moment, the only real utility this editor provides is causing .f files to 
+  open within Eclipse and not in an external editor (at least on Linux)
+  
+- #(nobug) - Ignore #ifdef/#ifndef/#else/#endif directives in argument files
+  (patch from contributor)
+ 
+------------------------------------------------------------------------------
+-- 0.9.0 Release --
+- #(nobug) - Add support for bind hierarchical target paths (patch from contributor)
+
+- #(nobug) - Add support for -file <path> within an argument file, in addition to
+  -f <path> (patch from contributor)
+
+- #(3530165) - Correct bug with inside constraint and binary expression
+
+- #(nobug) - Correct parse bug related to negated binsof statement (patch from contributor)
+
+- #(nobug) - Correct a critical bug with keyboard-driven selection, where the selected
+  text was not picked up by Copy (eg CTRL+C)
+  
+- #(3530324) - Correct a bug in initializing Template Parameter fields, that could cause
+  the template-descriptor editor to write parameter elements without 'type' attributes.
+ 
+- #(3530270) - Prevent argument-file parser from processing files with C/C++ extensions
+  (patch from contributor)
+  
+- #(enh) - Add preference transfer settings to allow users to preserve their settings
+  across workspaces. This did require changing preference IDs to add categories
+
+------------------------------------------------------------------------------
+-- 0.8.9 Release --
+
+- #(3526657) - Treat "_" as part of a word, not delimiter, during keyboard-driven selection
+
+- #(nobug) - Updates to project-paths settings trigger update of the Project Paths
+  entry in the Project Explorer
+
+- #(3529251) - Correct a bug in parsing bind of a hierarchical path
+
+- #(nobug) - Correct a lurking issue regarding reparenting of newly-parsed
+  active-file content. Now, we leave the parent pointer intact for children.
+  
+- #(3528722) - Correct a bug in parsing "throughout" expressions
+
+- #(nobug) - Soft constraint support added (patch from contributor)
+
+- #(enh) - Add a message to the editor Status Line indicating which index
+  manages the active file. Hopefully this will help in troubleshooting
+  indexer behavior
+  
+- #(nobug) - Change behavior of the Shadow Index, the index that is
+  created to manage a file that is otherwise not managed by an index. 
+  Previously, this index collected all SV files in the target directory
+  and indexed them. Now, this index only manages the target file. This should
+  result in less ambiguity as to which files are actually managed by an
+  explicit index.
+
+------------------------------------------------------------------------------
+-- 0.8.8 Release --
+
+- #(3526097) - Correct parse error with new <expr>; statement
+
+- #(enh) - Enhance template infrastructure with support for user-defined
+  template parameters. Currently, integer-, identifier-, and class-type 
+  parameters are supported.
+  
+- #(enh) - Add a form-based editor for the XML-formatted template descriptor file
+
+- #(nobug) - Correct parse error with multi-dimension vectors (eg wire [3:0][3:0])
+
+- #(3527774) - The parser does not handle a #delay statement that uses an array
+
+
+------------------------------------------------------------------------------
+-- 0.8.7 Release --
+
+- #(nobug) - Correct content-assist issue with comparison operators. For example:
+  if (a >= <<CONTENT_ASSIST>>
+  
+- #(3035042) - Correct an issue where sometimes the Override Tasks/Functions
+  dialog opens with no content shown.
+  
+- #(nobug) - Correct an issue with the Override Tasks/Functions dialog that
+  caused the classes to not always be listed in class-hierarchy order
+  
+- #(enh)   - Add initial support for externally-defined SV templates.
+
+- #(enh)   - Add Preferences page to configure template paths
+
+- #(3521770) - User option to disable automatic rebuild of SV Index
+    - When Auto-Rebuild is disabled, index rebuild only takes place:
+        - On startup if the index is invalid
+        - When the user requests a rebuild
+  
+------------------------------------------------------------------------------
+-- 0.8.6 Release --
+
+- #(nobug) - Ensure content assist for macros is provided without name-mapped
+ parameters. SV only supports positional parameters for macros.
+ 
+- #(3500603) - Expanded outline-view paths are now saved and restored when
+  the file contents change
+  
+- #(3261116) - Outline view now identifies cases where an update is due to
+  the file changing, and does not re-set the editor selection.
+  
+- #(nobug)   - Debug is now controlled in four levels: off, minimum, medium, and maximum
+
+- #(nobug)   - Update auto-indent to indent `include directives inside current scope (eg package)
+
+- #(enh)     - Add basic template capability for several UVM features:
+                 - UVM Agent
+                 - UVM Environment
+                 - UVM Test
+                 - UVM Sequence
+
+------------------------------------------------------------------------------
+-- 0.8.5 Release --
+
+- #(3513767) - Correct incorrect outdent for fork/join block
+
+- #(3509102) - Correct update-site name as reported in the update manager
+
+- #(3482303) - Add initial support for configurations. Configurations now parse correctly, 
+  are displayed in the outline, and are handled by the indenter
+
+------------------------------------------------------------------------------
+-- 0.8.4 Release --
+
+- #(3509696) - add sorting button in outline view
+
+- #(nobug) Add new dialogs to select 'Project Paths' in the SVEditor 
+  project properties pages
+  
+- #(3479754) Correct a parse error with type parameters
+
+- #(3479836) Correct a parse error with initialized associative arrays
+
+------------------------------------------------------------------------------
+-- 0.8.3 Release --
+
+- #(nobug) Increase performance of the persistence mechanism used by the indexer
+  by around 10x.
+  
+- #(nobug) Filter 'NullStmt' items from the outline view
+
+
+------------------------------------------------------------------------------
+-- 0.8.2 Release --
+
+- #(3483902) - Parameters declared in tasks not recognized
+
+- #(nobug) - Correct problem with argument-file parser that could result
+  in a 'hang'
+
+------------------------------------------------------------------------------
+-- 0.8.1 Release --
+
+- #(3482259) - Vectored Delayed Wire type not parsed
+
+- #(nobug)   - Added toggle for `defines in outline view
+
+- #(3486909) - Correct inconsistencies in indenting and indent shifting 
+  when spaces are to be inserted instead of tabs
+ 
+------------------------------------------------------------------------------
+-- 0.8.0 Release --
+- (#2256648) New feature: configurable outline 
+	- User can now selectively turn on / off:
+	  - Always blocks
+	  - Assign statements
+	  - Initial statements
+	  - Generate blocks
+	  - Signal declarations
+	  - Module instances
+	  - Include files
+	  - Task / function declarations
+
+- (#nobug) Correct parse error with in-line 'dist' constraint
+------------------------------------------------------------------------------
+-- 0.7.9 Release --
+
+- #(3482259)    Vectored Delayed Wire type not parsed correctly
+
+- #(3476740) 	Module Instance Icon not shown in Outline View
+
+- #(3473539) Add colorization of system calls
+   - Added colorization of system calls such as $display etc.
+
+- #(3306728) Correct bug in colorizing the compare view when one of the
+  documents being compared comes from a Team Provider
+
+- #(3476740) 	Module Instance Icon not shown in Outline View
+
+- #(nobug) Merge in outline-filter changes from Steven
+
+- #(3482997) Correct a bug involving processing of files with a .vh extension
+
+- #(nobug) Add support for user-specified file extensions via the Preference dialog
+
+------------------------------------------------------------------------------
+-- 0.7.8 Release --
+
+- #(3469890) 	Case statement with default, now : not parsed correctly
+  case (a) 1: b=1'b0; default b=1'b1; endcase now fixed
+
+- #(nobug) Correct a parse error with scoped cast types (eg a = myscope::mytype'(val))
+
+- #(nobug) Correct a parse error with randomize calls without an argument list:
+  assert(cls1.randomize with {a==2});
+
+- #(nobug) Correct a parse-bug conflict between type and static reference:
+  a::b[1:0]
+
+- #(3470024) 	net declaration with drive strengths not parsing
+	wire (strong1, weak0) #tck_delay pad_an12 = pad_an12_r; 
+
+- #(nobug) Improve filtering of forward typedefs during open-declaration operation
+
+------------------------------------------------------------------------------
+-- 0.7.7 Release --
+
+- #(nobug) Correct implementation of open-declation for `include files 
+
+- #(3468310) Correct a bug in the template completion processor. Now, the
+  content assist trigger is the template name rather than the content prefix
+
+- #(3468309) Correct a bug in the expression scanner. Now, open declaration
+  and open type hierarchy works when the cursor is placed both on the head 
+  and the tail of a token.
+
+- #(3469088) Correct a parse bug involving declaring a virtual-interface variable
+  in a begin/end scope
+
+------------------------------------------------------------------------------
+-- 0.7.6 Release --
+
+- #(nobug) Correct indent for non-struct/union typedef 
+
+- #(3464258) Correct null-pointer exception while constructing class hierarchy.
+
+- #(3464297) Correct class-cast exception while browsing hierarchy
+
+- #(nobug) Implement parse support for SV binds
+
+- #(nobug) Correct parse error with iff-conditional cross coverpoints
+
+- #(nobug) Implement parsing for coverpoint transition bins
+
+- #(nobug) Correct parse bug involving conflict between property paren
+  expression and sequence match item expression
+
+- #(enh) Implement colorizing support for Eclipse 'diff' editor. Now, 
+  keywords and language features are appropriately colorized
+
+- #(enh) Update to Project Explorer integration to mark error-containing 
+  files, and their containing folders, with error markers
+
+- #(nobug) Correct an issue with the declaration cache where contents were
+  not properly cleared when an index was invalidated
+
+- #(nobug) Correct an issue with path expansion that led linked paths 
+  (absolute paths) that existed within the workspace to not be treated
+  as equivalent to workspace paths. 
+
+- #(nobug) Correct a case where the file timestamp was not set. This caused
+  an index that should be valid to be declared invalid on reload
+
+- #(nobug) Correct an bug involving index iteration across project references.
+  This issue was observed in the hierarchy view, since this view is one of 
+  the few that still uses index iteration (as opposed to the declaration cache) 
+
+- #(nobug) Correct a bug in the hierarchy viewer where the fields of the
+  root class were not correctly displayed
+
+- #(enh) Add basic progress monitor for the hierarchy viewer, since this 
+  operation currently can take a long time
+
+------------------------------------------------------------------------------
+-- 0.7.5 Release --
+
+- #(3452746) Correct parse bug involving randcase. randcase does not 
+  accept a switch expression
+
+- #(nobug) Support local::-qualified variable references in a randomize call
+
+- #(nobug) Add initial support for cross-project references. Any element 
+  referenced by the index setup for a project (include files, declarations)
+  can be made available to the index of another project by referencing the
+  declaring project
+
+- #(nobug) remove portlist from description of Module content assist. 
+  Presenting the portlist in the content assist description seems to clutter up 
+  the description and doesn't seem to add much value
+
+- #(nobug) Correct a bug with content assist across a class extension 
+  hierarchy. Now, content assist properly searches up the class hierarchy
+
+- #(nobug) Correct dump/restore issue involving the UVM library
+
+- #(enh) Add preferences to control how module/instance instantiations are presented
+  by content assist. 
+
+------------------------------------------------------------------------------
+-- 0.7.4 Release --
+
+- #(3445549) 	Number of paramters for tran and rtran incorrect
+
+- #(3445551) 	Array'ed instances of primitives not recognized
+      rtranif1 my_gate3[1:0] ({net4,net5}, {net5,net6}, {net6,net7});
+
+- #(3447506) 	Processor directives protect and endprotect not recognized
+
+- #(nobug) Correct an issue with pre-processor `elsif and subsequent macro 
+  defines. 
+
+- #(3452563) 	Rise and fall delays in assign statements not supported
+
+- #(nobug) Correct a build issue with the documentation plugins
+
+------------------------------------------------------------------------------
+-- 0.7.3 Release --
+
+- (#3442021) Correct a bug in the Open Declaration implementation that is triggered when
+  the line before the open-declaration context contains a comment. For example:
+  module a;
+  endmodule
+  module b;
+    // a.
+    a a0();
+  endmodule
+
+  In this case, the previously-used text analysis would attempt to analyze a.a for open 
+  declaration rather than just 'a'.
+
+- (#3442016) Correct a parse bug involving an `include directive with an unterminated
+  string without a trailing \n:
+  `include "a
+
+------------------------------------------------------------------------------
+-- 0.7.2 Release --
+
+- Implement a workaround to maintain support for Eclipse 3.5.x. Eclipse 3.6
+introduced support for linked resources at the project level. We want to
+maintain support for this, while also allowing SVEditor to run with 3.5. 
+
+- (#3441833) Correct an issue with preferences where the comment-color preference did not
+  properly control the color of multi-line comments
+
+- (#3441287) Correct parse bug involving a delay specifier with a trailing based number:
+  a <= #1 'd1;
+
+------------------------------------------------------------------------------
+-- 0.7.1 Release --
+
+- (#3440393) Correct parse bug involving >>> operator
+
+- (#3440393) Correct parse bug involving K&R-style function prototype:
+function void myfunc;
+  input a, b;
+  output c, d;
+  // ...
+endfunction
+
+- (#3428296) Correct parse bug involving modport-type field
+
+- (#3421265) Implement support for library paths (-y switch). The index will
+  add all files with SV extensions (.sv, .v, .vl) in the specified directory
+  to the index file list
+
+------------------------------------------------------------------------------
+-- 0.7.0 Release --
+
+- (#nobug) Added support for delay operators formatted:
+  #(min_time:type_time:max_time)
+
+- (#nobug) Added support for bitwise XNOR '~^' and '^~'  This is arguably not
+  a distinct operator
+
+- (#nobug) Added parameters to Module Content Assist.  Also tried to cleanup
+  and do a better job of instantiating ports
+
+- (#nobug) Add parse support for (min:typ:max) assignment w/o #
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea13 Release --
+
+- (#3434561) Drive strengths of Primitives not supported
+  - Significant update to primitive support including drive strength support,
+    improved error messaging, and better parameter checking
+- (#nobug)  Added support for always @*
+- (#nobug)  Added "disable iff" support to property parsing
+- (#nobug)  Added support for interface ports with default values
+
+- (#nobug)  Ensure parameter declarations are correctly displayed in the outline
+
+- Add preferences page for content assist to control formatting of tasks/functions
+
+- Added Content assist for module instantiation
+
+- (#3436267) Correct parser bug involving concatenation and ternary operator
+
+------------------------------------------------------------------------------
+
+-- 0.6.1.ea12 Release --
+
+- (#no bug) Fixed "Toggle Block Comment" - Ctrl-/
+
+- (#3428302) 	mixing explicit connection and connection by port name
+   Fixed error generated by implicit port connections
+
+- (#no bug) Have auto instantiated functions instantiate named ports. i.e.
+        myfunction (.a(a), .b(b)); vs myfunction (a, b);
+
+- (#3432503) Correct lexing bug involving underscore-containing decimal literals
+
+- (#3433089) Correct parser bug involving event-delayed assignment (a <= @(posedge clk) 10)
+
+- Add beginnings of a 'batch' plug-in to facilitate accessing SVEditor functionality
+  from scripts. Currently python scripts are supported.
+
+------------------------------------------------------------------------------
+
+-- 0.6.1.ea11 Release --
+
+- (#3427965) Add parse support for extern constraint declarations
+
+- (#3426561) Environment Variables in files.f.  Corrected the file parser to
+  get environment variables from Project Properties > Resource > Linked
+  Resources > Path Variables
+
+- (#3429943) Array of module instances - now doesn't flag an error when
+  parsing code.  Ports are parsed correctly.
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea10 Release --
+
+- Hook up Tab Width preference to override default Eclipse behavior of  
+  always translating a tab to 4 spaces
+
+- Correct a bug involving single-line macros with a trailing comment. Correct 
+  behavior in this case is to trim the comment, while correct behavior in the 
+  multi-line case is to preserve the comments.
+
+- Track include files that cannot be located and only search once for them. 
+  This should improve the parse speed 
+
+- Correct a parse bug with delays involving a hierarchical identifier. For example:
+  #a.b;
+
+- Hook up the Eclipse Linked Path Variable manager, which enables to user to
+  define variables using Preferences->General->Workspace->Linked Resources,
+  then refer to them in a .f file or other path used by SVEditor.
+
+------------------------------------------------------------------------------
+
+-- 0.6.1.ea09 Release --
+
+- Add basic auto-indent support at block level for property and sequence
+
+- Add complete set of ignored arguments for Questa vlog compiler
+
+- Change implementation of the IndexIterator override that ensures that 
+  content-assist proprosals from the unsaved content of the active file are
+  properly supplied. This fixes a bug that was introduced with the addition
+  of a declaration cache.
+
+- Small improvements to property parsing 
+
+- Correct bug with Function/Task override dialog and functions with an 
+  implicit return type. These functions are now properly implemented.
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea08 Release --
+
+- Correct a bug with the global definition cache locating typedefs within
+  a package. This was producing a null-pointer exception when content
+  assist was invoked on a typedef.
+
+- Enhanced parsing of assertions and sequences. Still incomplete, but much better
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea07 Release --
+
+- Correct a bug with sub-including argument files. The Index was improperly
+  prepending the index base location to the argument file.
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea06 Release --
+
+- Correct bug involving content-assist on a field whose type was also a
+  forward-declaration typedef (eg typedef class my_class;). Content assist
+  correctly now filters out the forward declarations when searching for 
+  the target type
+
+- (#3410621) Add support for `elsif pre-processor directive
+
+- Correct bugs involving content assist on begin/end-block-local variables
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea05 Release --
+
+- Correct an auto-indent bug with an initial statement with a single statement
+  (not a block)
+
+- Correct an auto-indent bug with struct and union variables
+
+- Correct content-assist issue with scopes within interfaces and modules
+
+- (#3404198) Correct a parse bug with task/function calls having unspecified
+  (default) parameters
+
+- (#3232422) Correct auto-complete issue with labeling end of blocks
+
+- Correct parse errors with empty named-mapped task/function parameters:
+  function void foo(int a=2, int b=3);
+  ...
+  foo(.a(), .b()); // same as foo(2, 3) or foo() 
+
+- (#3404207) Correct open-declaration support for struct and union fields
+
+- Add support for argument files that sub-include argument files using the
+  -f argument (eg -f sub_argument_file.f)
+
+------------------------------------------------------------------------------
+-- 0.6.1.ea04 Release --
+
+- (#3393396) Correct macro-expansion bug with string containing unbalanced paren
+
+- (#3400565) Correct parse error with name-mapped struct initialization
+
+- (#3403127) Correct parse error on a function with implicit vectored return 
+
+- (#3393383) Correct parse error with streaming operators with slice size specified
+
+- Correct a parse bug with initialized struct fields
+
+-- 0.6.1.ea03 Release --
+
+- (#3393397) Correct non-blocking event trigger
+
+- (#3393386) Correct parse bug with packed and signed/unsigned structs
+
+- (#3392717) Add parse support for timeprecision / timeunit directives
+
+- (#3398604) Correct parse error with strength-specified assign
+
+- (#3392733) Correct parse error with virtual interface-parameterized class
+  static method invocation
+
+-- 0.6.1.ea02 Release --
+
+- (#3392156) Correct a parse bug with time unit 's'
+
+- (#3392155) Implement parse support for stream operators (eg { << {...}})
+
+- Add a "Global-Declaration Cache" to the index. This permits searching for
+  global types (classes, modules, interfaces, functions, packages) without
+  iterating through the entire index data structures. 
+  The global declaration cache is stored along with the index persistence
+  data, and enables operations such as content assist and open declaration
+  to be much faster.
+
+- Enhance content assist to search within begin/end scopes -- for example:
+  initial begin
+    class_type e;
+    e.field<<CONTENT_ASSIST>>
+  end
+
+- Correct a bug with content assist using task/function parameters. For example:
+  task my_task(class_type param);
+    param.field<<CONTENT_ASSIST>>
+  endtask
+
+- (#3392730) Correct bug in lexing strings containing parens
+
+- (#3392170) Correct bug with generate blocks containing named begin/end blocks
+
+- (#3392161) Correct bug involving strings with embedded comments and backslashes
+
+- (#3392721) Correct parse bug with struct/enum-type variables. For example:
+   class c;
+       enum {A, B, C} enum_field;
+   endclass
+
+-- 0.6.1.ea01 Release --
+
+- Re-release of 0.6.0.ea10. Looks like Eclipse thinks version 'ea10' is less than 'ea9'
+
+- (#3358145) Enhance parser to accept attributes on task/function calls
+
+- (#3362302) Multi-dimensional array parse error (string my_string[][2];)
+
+- (#3354142) Enable module-port-connection content assist when only '.' is
+  specified
+
+-- 0.6.0.ea10 Release --
+
+- Tighten up lexing of numbers. Ensure decimal numbers are not parsed as hex numbers. 
+  Ensure floating-point constants are parsed correctly.
+
+- (#3358145) Enhance parser to accept attributes on task/function calls
+
+- (#3362302) Multi-dimensional array parse error (string my_string[][2];)
+
+- (#3354142) Enable module-port-connection content assist when only '.' is
+  specified
+
+
+-- 0.6.0.ea9 Release --
+
+- (#3357222) Correct parse error on class type with a virtual-interface 
+  parameter.  
+  For example: class my_class extends my_super #(virtual my_interface)
+
+- (#3357305) Correct problem with open-declaration in a scope with an assert statement
+
+-- 0.6.0.ea8 Release --
+
+- Add initial support for module-port content assist. This feature helps in
+connecting ports of an instantiated module to the instantiating environment
+
+- Correct a bug with Open Declaration for a module type
+
+-- 0.6.0.ea7 Release --
+
+- Correct a problem with inclusion of the new UVM plug-in in the SVEditor feature
+
+-- 0.6.0.ea6 Release --
+
+- Correct lexer bug with whitespace in based numbers, such as "32 'h 2A"
+
+- (#3243605) Correct bug with macro reference adjacent to ':' (eg `A:begin)
+
+-- 0.6.0.ea5 Release --
+
+- Correct parse bug related to parameterized static-reference expressions
+  (eg int a = foo #(A)::b;)
+
+- Correct parse bug related to parameterized static-assignment expressions
+  (eg foo #(A)::b = 2;)
+
+- Correct a macro-argument processing issue related to string macro arguments
+  that contain commas
+
+- Correct a bug in support for unbased, unsigned literals: '0, '1, 'z, 'x
+
+- Correct parse bug with initialized associative arrays
+
+- Correct parse bug involving a delay value derived from a field reference
+  (eg #obj.foo;)
+
+- Correct expansion of macros containing embedded parameter references
+  (eg `define MY_A_MACRO `define MY(P) `MY_``P``_MACRO)
+
+- Correct parse bug related to type parameters (foo #(unsigned int) bar;)
+
+- Enable macros with embedded single-line comments
+
+- Improve ability to distinguish between type declarations and 
+  type-based references
+
+-- 0.6.0.ea4 Release --
+- (#3240224) Corrected issue with recursive inclusion of files
+- (#3302295) Correct bug in error-recovery logic, resulting in a parser hang
+- Correct a bug with parsing port-map wildcards: module_inst A(.*)
+
+
+-- 0.6.0.ea3 Release --
+
+- Correct a parse error with the '**' operator
+
+- Correct an infinite loop when a parse error occurs in a class scope
+
+- Temporarily disabled file-structure display in the Project Explorer
+
+-- 0.6.0.ea2 Release --
+
+- Correct a few bugs with the editor outline view. 
+    - Module instances, imports and a few other things affected by the 
+      SVDB structure changes are now correctly displayed.
+    - Covergroup items are not expandable now
+    - Covergroup options are now displayed correctly
+
+- Correct a parse error with coverpoint sized array bins (bins foo[8] = ...)
+
+- Update 'Rebuild Index' command on the context menu of the Project Explorer
+  to immediately request a build of the index after invalidating it.
+
+- Correct open-declaration for super-class reference
+
+-- 0.6.0.ea1 Release --
+
+- Enhance SVEditor to make two time-consuming startup tasks 
+  (index-afinity discovery and file parse) threaded operations. 
+  This has the effect of making SVEditor open more quickly.
+
+- Major changes to the parser. Nearly all SystemVerilog constructs
+  are fully parsed. Previously, many were lexically processed via
+  a scanner.
+
+- Use a backing cache for files in the index. This permits faster
+  startup time, and should be more scalable, since the database need
+  not be entirely in memory
+
+-- 0.4.0 Release --
+
+- (#3181880) Critical bug related to restructuring of the SVDB
+
+- Corrected a bug with the Outline view, also due to SVDB restructuring 
+
+------------------------------------------------------------------------------
+
+-- 0.3.9 Release --
+
+- Correct a problem with the SVEditor Outline view that prevented the viewer
+  from updating in response to on-the-fly changes in the editor. 
+
+- Correct parse bug related to pre- and post- increment/decrement expressions
+
+- (#3176354) Update parser to correctly support all gate-level primitives
+
+- (#3177127) Correct a problem with relative include paths that extend above 
+  the workspace location.
+
+- (#3176424) Corrected the functionality of the Edit button on the  
+  Source Collections project properties tab.
+
+------------------------------------------------------------------------------
+
+-- 0.3.8 Release --
+
+- (#3159790) Correct critical bug in windows file-pattern matching
+
+------------------------------------------------------------------------------
+
+-- 0.3.7 Release --
+
+- Fix bugs in build of 'Developer Docs' plugin-in
+
+- Enable handling of enum forward-declaration in the parser
+
+- (#3153829) Change 'shadow' SourceCollection index, which is created when a file outside
+  an existing index is opened, to only index sources in the top-level directory.
+
+- Update the file-finding code (used by SourceCollection) to identify and
+  skip excluded directories. This makes search more efficient.
+  Should resolve (#3152333)
+
+- Change the marker-propagation mechanism to work properly when triggered via
+  a file-change event. This should result in more-reliable error propagation.
+  This appears to resolve (#3154474)
+
+
+------------------------------------------------------------------------------
+
+-- 0.3.6 Release --
+
+- Integrate the current 'Getting Started' guide into the Eclipse help system.
+
+- Add initial "SVEditor Internals" documentation -- for now, just the 
+  JavaDoc-created API document.
+
+------------------------------------------------------------------------------
+
+-- 0.3.5 Release --
+
+- Improve support for parsing and preserving import statements. Imports are
+  parsed and represented in the AST, as well as being shown in the Outline view.
+  This improved support also resolves issue #3135375.
+  
+
+- Add Initial Eclipse Search support. Search can now be accessed via the
+  Search->SystemVerilog menu item (or, alternatively, the SystemVerilog tab
+  on the Search dialog). 
+  - Searching for declarations is supported (reference search unsupported)
+  - Searching for Types, Methods, Packages, and Fields supported
+  - The 'List' format for search results has reasonable support, while the
+    'Tree' format is mostly unimplemented
+
+- Change SVDBLocation to track line position in addition to line number. 
+
+- Implement styled text for label providers. The effect of this change can be
+  observed in the Outline view. Field types and function return types are now
+  displayed with different styling than the name of the function/field.
+
+- [Internal API] Update the ISVDBItemIterator interface to support contextual 
+  scanning. This allows the client to, for example, scan to the next package 
+  declaration without seeing all elements in between.
+
+- Add a version to the saved parse database. This enables a better message to
+  the user when a new SVEditor version chooses to rebuild a database due to
+  a format difference. 
+
+------------------------------------------------------------------------------
+
+-- 0.3.4 Release --
+
+- Add parse support for 'defparam'
+
+- (#3135411) Correct auto-indent bug in moving a non-whitespace line down.
+
+- Correct auto-indent bug involving leading whitespace when moving a
+  line down the page.
+
+- (#3127392,3141758) Add support for module hierarchy display via the 'F4' 
+  shortcut
+
+
+------------------------------------------------------------------------------
+
+-- 0.3.3 Release --
+
+- (#3124078) Resolve parse error with delayed assign
+
+- Correct a bug with the Library Index related to relative include paths 
+  that extend outside the project directory. 
+
+- (#3115121) Enable 'Open Declaration' for updir-relative include paths 
+  (eg `include "../../../my_h.svh").
+
+- Parser/scanner now parses through more of the behavioral block statements. Since 
+  there are many SystemVerilog statements that don't end with a ';', this makes
+  parsing more reliable.
+
+- Correct parse errors discovered when adding tests based on OpenCores projects
+    - Correct a parse error with 'if' statements attached to an always.
+      Enhanced parser to begin parsing through behavioral statements
+    - Enhanced parser to allow initialized nets
+    - Correct parser bug with reduction operators in expressions
+    - Correct a parse error with concatenations in assigns
+    - Correct parse bug with non-ansi task/function parameter declarations
+    - Enable multiple comma-separated module instances
+    - Enable basic parsing of specify blocks
+    - Enable basic parsing of pullup/pulldown
+    - Correct a pre-processor problem with macro arguments that are 
+      concatenations
+    - Enhance the pre-processor to exclude single-line comments from
+      macro definitions, while including multi-line comments
+
+- Correct a problem with deeply-nested macro expansion where a trailing ')' was left
+  in the expansion text
+
+- (#3123564) Fix parse error with import statements prior to the module
+  port declaration
+
+
+------------------------------------------------------------------------------
+
+-- 0.3.2 Release --
+
+- (#3118954) Correct a parse error with sized references to an enum type
+
+- (#3118954) Correct a problem parsing content after a package declaration
+
+- (#3118945) Add a filter to the editor to gracefully deal with files that 
+  contain \r-delimited lines. Generally, this results when a file created on
+  the Windows OS is mangled in some form. \r-delimited lines will be 
+  automatically transformed to \r\n-delimited lines and a message will be 
+  displayed in the console.
+
+- Fix an issue with FileSystem indexing, where adding a new file to the 
+  FileSystem and attempting to open it causes the index to report that
+  the file "isn't in the FileTree Map". Solve by re-building the index
+  whenever a file is opened that exists on the FileSystem but isn't in the
+  FileTreeMap
+
+- (#3121178) Correct a windows-path issue that caused an opened file to
+  be associated with the wrong index, and consequently an internal error.
+
+------------------------------------------------------------------------------
+
+-- 0.3.1 Release --
+
+- (#2970554) Correct a crash due to a missing file when debug logging was
+  enabled.
+
+- (#3031087) Support CTRL+SHIFT+F binding for formatting file
+
+- Correct indenting of always_comb, always_latch, and always_ff blocks
+
+- (#3118081) Correct paste bug related to always_comb 
+
+- (#3118472) Correct outdent bug with empty enum declaration.
+
+- Correct a bug when pasting text that does not end with a newline. Previously,
+  the last token of the pasted text (eg endmodule) would often be dropped. 
+  Interestingly enough, this bug was being masked by a bug in the test
+  results comparison.
+
+- Support proper indent of forward typedef enum (eg typedef enum A;)
+
+- (#3118342) Added a workaround for interoperatbility of tabs and spaces in 
+  'insert-spaces' mode. It seems Eclipse tries to be 'smart' and insert
+  fewer spaces based on the number of preceeding tabs on the line. For example,
+  if the line starts with 1 tab, then a subsequent space-inserting tab will
+  only insert 3 spaces. If the line starts with 2 tabs, then only two
+  spaces will be inserted. 
+
+- (#3118464) Corrected a problem with content assist in an empty file
+
+- (#3115123) Initial implementation of Add/Remove Block Comment operations.
+   CTRL+SHIFT+/ comments selected block, while CTRL+SHIFT+\ uncomments block
+
+------------------------------------------------------------------------------
+
+-- 0.3.0 Release --
+
+- Correct parse errors with assignment expressions containing complement (~)
+  and system tasks (eg $abs(a))
+
+- Correct a bug with indenting of nested modules
+
+- (#3110581) Enable use of indenting-related preferences in the 
+  General->Editors->Text Editors category. Now, indent and auto-indent respect
+  the 'Insert spaces for tabs' preference and use the 'Displayed tab width'
+  preference to select how many spaces to indent.
+
+- (#3115322) Fix a problem with the pre-processor that prevented files with
+  unbalanced pre-processor conditionals from being opened
+
+
+------------------------------------------------------------------------------
+
+-- 0.2.9 Release --
+
+- Initial parse support for generate blocks (for, if, case)
+
+- Correct some issues with handling of clocking blocks. SVEditor is still
+  skipping over the clocking-block content, but should result in fewer 
+  parse mistakes.
+
+------------------------------------------------------------------------------
+
+-- 0.2.8 Release --
+
+- Correct problems with expansion of environment variables in argument-file
+  paths
+
+- Correct problem with content assist on indexed array/queue fields
+
+- Correct module-port parse bugs
+    - sized un-typed ports (eg module foo([3:0] a); )
+    - interface ports (eg module foo(interface a); )
+    - interface ports with multi-dimension vectors
+    - sized parameters
+
+
+------------------------------------------------------------------------------
+-- 0.2.7 Release --
+
+- Correct a problem when opening a declaration in a file that isn't currently
+  open in an instance of SVEditor. Now, an error is emited and a cast class
+  is avoided.
+
+- Correct bugs around auto-indent of pasted content
+
+- Correct bug with indent of if/else when begin is on a new line
+
+- Correct a problem with adaptive indent when the end point for adaptive 
+  training is a comment. 
+
+- Correct bug with pre-processor. Macro-embedded conditionals are now properly 
+  supported
+
+------------------------------------------------------------------------------
+
+-- 0.2.6 Release --
+
+- Correct a content-assist bug related to array and queue data types (#3046751)
+  The cause was a parser bug that caused Array and Queue data types to not be 
+  tagged properly.
+
+- Correct a content-assist bug with method-containing expressions, such as
+  field.task_call().<<CONTENT_ASSIST>>.
+
+- Improved the Indenter to handle adaptive indent in a more-flexible and
+  more-reliable manner
+
+------------------------------------------------------------------------------
+-- 0.2.5 Release --
+
+- Correct problem with setting cursor location of Open Declaration (#3034640)
+
+- Correct problems with compare and dump methods in the new TypeInfo classes.
+  These caused problems with index loading (#3034574 and #3034577)
+
+- Correct parse bugs with module ports
+    - Untyped ports with specified directions
+    - Modports: module foo(<interface>.<modport> mp);
+
+- Correct argument-file include-path resolution order. Now, if an 
+  identically-named file exists in multiple include directories, the correct
+  file (first found, traversing the include paths in order) will  
+  be included and used.
+
+- Removed a dangling reference to the 'SystemVerilog Methodology Class' 
+  wizard, which is a wizard for creating class templates that are specific
+  to a methodology, such as OVM or VMM. This wizard was still accessible
+  via the main menu 'New' menu, which should not be the case until this 
+  work is complete.
+
+- Add support for always variants (always_comb, always_iff, always_latch)
+
+- Correct content-assist issue (#3038561) when document length is 0
+
+- Update function-override logic to tag overridden virtual tasks/functions
+  with 'virtual'
+
+- Correct an indent problem with comment blocks. Comment lines following
+  the initial line were incorrectly indented
+  - Need to push a provisional indent when entering a scope. This provisional
+    indent can be altered later when a non-comment element is detected.
+
+------------------------------------------------------------------------------
+
+-- 0.2.4 Release --
+
+- Correct parse bugs with module parameters
+    - empty parameter list
+    - parameter declaration inside module
+
+- Add parse support for locally-defined parameters
+
+- Add parse support for typed-net elements
+
+- Add basic parse support for nested interfaces and nested modules
+
+------------------------------------------------------------------------------
+
+-- 0.2.3 Release --
+
+- Add additional tests for references to project-external paths from 
+  argument file project paths
+
+- Correct a bug with argument-file include paths having a trailing '/'. 
+  For example: +incdir+../../../
+
+- Correct bugs in project-external relative paths specified in an 
+  argument file project path
+
+- Correct a bug with module parsing that caused content assist to not be
+  triggered very near the end of the module, due to an expected parse error
+
+- Updated the content-assist scanner to be aware of comments within the
+  source. This prevents content in a comment from interfering with 
+  content assist.
+
+- Correct a reference to the 'expression' Eclipse plug-in that prevented
+  SVEditor from installing in some Eclipse versions. The 'expression' plug-in
+  reference is now un-versioned.
+
+- Add basic scanner support (ignore) for clocking blocks
+
+- Add basic scanner support (ignore) for modports
+
+- Fix bug with parsing of always expression. The new parser that markes
+  parse errors made it apparent that there was a problem
+
+- Correct parse bug with 'virtual interface' datatype
+
+- Correct bug with handling of empty constraint block (#3031558)
+
+- Correct bug with labeled covergroup
+
+- Correct parsing of [net_type] [type_or_implicit] [elem]
+
+- Update lexer to recognize time-unit constants
+
+- Restored support for package Open Declaration from an import
+
+-- 0.2.2 Release --
+
+- Support content assist for SystemVerilog keywords
+
+- Fix bugs, introduced by the new parser, in support for covergroup 
+  content assist and added tests
+
+- Enhance the Project Explorer with a Project Paths entry that allows the
+  directory structure of indexes (workspace internal and external) to be 
+  browsed. This makes it significantly easier to open a file that is part
+  of an index that is outside the filesystem. It also makes it easier to
+  see what is present in the index paths of a project.
+
+- Enhanced Argument File index to support argument files that reference
+  paths outside the workspace. An example of this case is shown in the
+  OVM 'xbus' example. The example project is 'xbus', but the argument file
+  in the project references the OVM library several directory levels 
+  above -- outside the project directory.
+
+- Enhance support for content assist in 'module' context
+    - Ensure ports are parsed
+    - Search ports (same as function parameters) when searching up for 
+      content-assist proposals
+
+-- 0.2.1 Release --
+
+- Corrected a pretty severe auto-indent bug related to pasting the opening 
+(and not closing) portion of a multi-line comment. Now SVEditor does not
+attempt to auto-indent cases where newly-pasted content makes comment
+boundaries ambiguous
+
+- Correct a bug with hierarchy-based navigation (ie Open Declaration) that
+caused navigation history to not be maintained properly
+
+- Extensive changes to the parsing framework, which will example improvements
+  to the accuracy and extent of parsing.
+
+- Extended content assist to structs -- both typedef and inline-decl
+
+- Extended content assist to comprehend extern functions and search the
+  corresponding class scope
+
+- Annotate editor with error markers from the parser. For now, this should 
+  be helpful in understanding where the parser is encountering parser errors.
+  As the parser adds features, this should be a useful tool for SystemVerilog
+  developers.
+
+
+-- 0.2.0 Release --
+
+- Add basic support for code templates. Currently, no built-in code templates
+  are provided, though contributions are very welcome. Suggestions for
+  extending code-template support are, likewise, welcome.
+
+-- 0.1.9 Release --
+
+- Correct a macro-expansion bug with nested macros that was triggered 
+  by the VMM library source
+
+- Correct a bug with handling of endfunction/endtask with a end label 
+
+-- 0.1.8 Release --
+
+- Make auto-indenter adaptive to surrounding scope indent. This means that
+  if class methods have the same indent as the class scope (aligned to margin),
+  the auto-identer will indent the method body statements one tab in from the
+  margin.
+
+- Corrected a bug with auto-indent paste and strings with embedded 
+  control characters. In this situation, the pasted content would 'disappear'.
+
+- Enhance content-assist when editing parameterized classes by searching 
+  class parameters as a data-type
+
+- Enable full-file indent via CTRL-I. Previously, this operation was diabled.
+
+- Resolved a bug in auto-indent scanner that caused some combinations of 
+  empty lines to be collapsed into one
+
+- Filter __sv_builtin classes from super-class proposal list
+
+- Change default focus in 'New SV Class' wizard to 'Class Name' field
+
+- Add scanner support for 'pure virtual' tasks/functions
+
+- Auto-indent now recognizes foreach as a loop construct
+
+-- 0.1.7 Release --
+
+- Add class-creation wizard that supports browsing for a super-class and 
+  implementing the constructor with super-constructor parameters
+
+
+-- 0.1.6 Release --
+
+- Correct include-pathing issue for nested defines. 
+
+- Correct macro-resolution bug for macros defined in sub-included files
+
+- Update list of supported directives. Most of these are ignored for now, but
+  produce no errors.
+    - `celldefine 
+    - `endcelldefine
+    - `line
+    - `nounconnected_drive
+    - `resetall
+    - `unconnected_drive
+    - `undef
+    - `undefineall
+
+- Fix project explorer to not display error markers as part of the file structure
+
+-- 0.1.5 Release --
+
+- Resolve a bug in indent support for always 
+
+- Resolve a critical bug with file paths on Windows
+
+-- 0.1.4 Release --
+
+- Add content-assist support for class typedefs. Now, class typedefs are 
+recognized as aliases for the underlying type.
+
+- Correct a bug with content assist for macros having no parameters. 
+Previously, these macros were displayed incorrectly in the content proposal.
+
+- Correct a bug with content-assist on the RHS of an '='. 
+
+- Correct a bug with expression indenting. Fix bug / add tests for indenting of covergroups, coverpoints.
+
+- Fix bug with opening a file that exists in the root of a project
+
+- Correct a windows-specific bug that resulted in the built-in library
+  missing files
+
+- Correct a bug with indenting pre-processor directives such as `timescale
+
+- Collect and display errors as markers
+    - Missing define
+    - Missing include file
+    - Annotate the parent index that manages the file 
+
+- Expand testing of indexing
+    - Library Index
+        - Ensure new files are correctly merged in
+            - On load, discovering a previously-missing file triggers an 
+              index build (Workspace and Filesystem varieties)
+            - During operation, adding a file that was previously a 
+              missing include triggers index rebuild (Workspace only)
+        - Ensure global defines are propagated
+        - Ensure missing includes/defines are annotated
+    - Argument File Index
+        - On load, discovering an updated index triggers index rebuild
+        - Ensure index is re-scanned when the argument file changes
+        - Ensure global defines are propagated
+        - Ensure missing includes/defines are annotated
+    - Plugin Lib Index
+        - Ensure new files added (ie new release) result in updated index. 
+    - SourceCollection Index
+        - Update structure-determining logic to recognize 
+          package,module,interface, and program-based structures
+        - Ensure global defines are propagated
+        - Ensure included files are located
+        - Ensure missing includes/defines are annotated
+
+------------------------------------------------------------------------------
+
+-- 0.1.3 Release --
+
+- Change the way that files are associated with indexes. Previously, only the
+containing project's indexes were checked to locate the index a file should
+be associated with. Typical setup for projects with a single build file and 
+multiple source locations do not work well with this scheme.  
+Now, the following is done:
+    - The file's containing project is checked to see if it manages the index.
+      This gives local settings priority
+    - Next, other open projects in the workspace are checked
+    - Finally, shadow indexes in the projects are checked
+
+- Correct bug with propagation of +define+ arguments from the argument file
+to the index define map.
+
+- Add Project Properties page for setting global pre-processor defines
+
+- Update indexers to use global defines. Now, the user can provide global
+defines -- ones, for instance, that might be provided directed to the 
+compile command.
+
+- Fixed a few minor bugs in indent support and added a few tests
+
+- Fix a minor pre-processor bug with macro expansion
+
+- Fix bug with indent of forever. Add test
+
+- Add content-assist support for '= new()'. Now, content assist provides 
+the constructor argument list.
+
+- Correct a bug with the Type Hierarchy view where a non-extended class
+is not shown.
+
+- Add icon for Coverpoint Cross
+
+- Add content-assist support for import. 
+
+- Add content assist for covergroups and coverpoints
+    - Support for accessing covergroup and sub-coverpoints in an expression
+    - Support for built-in methods (get_coverage, sample, etc)
+    - Support covergroup, coverpoint, and coverpoint cross options 
+
+
+------------------------------------------------------------------------------
+
+-- 0.1.2 Release --
+
+- Add content-assist support for parameterized classes. Now, content assist
+will parse and operate on the specialized class rather than its base type. 
+This means that, for example, content assist can 'see through' a parameterized
+member field.
+
+- Improve content-assist support for dynamic arrays, queues, and 
+associative arrays. Now, methods that are part of the type (ie queue) are 
+provided as content-assist proposals.
+
+- Add Class Hierarchy viewer. Selecting a class name in the editor and opening
+the Hierarchy view via the shortcut (F4) or the context menu will display the
+class super- and sub- class hierarchy. Class members for the selected class
+are shown in a separate pane. The source location for Classes and members 
+may be opened by double-clicking on the appropriate element in the 
+Hierarchy viewer.
+
+- Fix bug with accepting a expression content proposal with no leaf. 
+For example: foo.<CTRL-SPACE>. Previously, performing this operation would
+result in the content being inserted at the beginning of the document. 
+
+- Apply auto-indent to content inserted by Override Methods dialog
+
+- Correct a bug in the scanner with extern tasks/functions outside a 
+class/package scope
+
+- Fix auto-indent bugs
+    - Support package as an indent scope
+    - Resolve issues when typing at the very end of a document.
+    - Properly indent class declarations within packages and modules
+    - Correct issue with indenting extern task/function
+    - Support fork/join* as an indent scope
+    - Fix problem with pasting, with auto-indent, in the middle of a port map
+
+- Remove OVM plugin library from distribution. Source from user's environment
+is typically used.
+
+- Add SystemVerilog system tasks and functions to the default library. These
+now appear as content assist proposals
+
+- Correct a bug with scanning class declarations that occur on a single line
+
+------------------------------------------------------------------------------
+
+-- 0.1.1 Release --
+
+- Add the beginnings of an indenter. To activate, select text in the editor
+and select <CTRL>-I. Currently, blocks such as classes, modules, 
+tasks/functions, and begin/end blocks are supported. 
+    - This is still fairly experimental functionality. Please report any
+      issues you see!
+    - Unclear how best to indent macro invocations, since many 
+      are not terminated at statement boundaries (at least in OVM). 
+      For now, assuming that macro invocations end at a line boundary.
+
+- Update on-the-fly auto-indent to use the new indenter. This replaces a 
+whole raft of heuristic code that was less than reliable. However, as noted
+above, the new indenter is less than fully-tested, so expect some instability. 
+
+- Support auto-indent for paste using the indenter. This functionality is 
+only enabled if auto-indent is enabled in the SVEditor Preferences.
+
+- Auto-indent is enabled by default for 'new' workspaces. For existing 
+workspaces, the user will need to enable auto-indent via the SVEditor 
+preferences page.
+
+------------------------------------------------------------------------------
+
+-- 0.1.0 Release --
+
+- Ensure that changes to task/function arguments are updated in the database
+when the file changes.
+
+- Make expression parsing more selective with respect to quoted strings. 
+Content assist adjacent to a string (eg in a $display() call) now works 
+much better
+
+- Corrected a lookup bug that prevented task/function parameters or locals
+from being presented as content-assist proposals
+
+- Added support for always/initial blocks and assigns to the scanner and 
+outline view
+
+- Direct debug output (enabled from SVEditor preferences page) to console
+in active workbench.
+
+- Update support for enumerated types. Enum types and values are presented
+and typenames can be cross-referenced
+
+- Update Outline view to show function return type
+
+- Changed content-assist searches to be case-insensitive. The code architecture
+is also now more modular, to permit easier future updates.
+
+------------------------------------------------------------------------------
+
+-- 0.0.9 Release --
+
+- Corrected a bug with implicit-relative paths in an argument file. 
+Previously, ./<path> and ../<path> were recognized as relative paths. 
+Now <path> is also recognized as a relative path.
+
+- Corrected a bug in processing virtual interface fields. The scanner was 
+incorrectly identifying these fields as a change of scope. Interface is a 
+first-level keyword, but virtual interface is a valid field.
+
+- Corrected problem in parsing indexed expressions when extracting
+root/trigger/leaf from an expression.
+
+- Enhanced expression parsing (translation from text to SVDBItems) to account
+for static references based as a class type: <class>::<field>::...
+
+- Enhanced the lookup procedure performed by the editor on startup to 
+determine which index manages a given source file. Extended to recognize
+files from the filesystem that are managed by an index attached to a 
+project in the workspace.
+
+- Corrected a bug with class-field lookup (cross-linking and context assist) 
+where the super-class hierarchy was not considered.
+
+- Centralized lookup code for expressions, combining content-assist and
+cross-linking lookup
+
+
+
+------------------------------------------------------------------------------
+
+-- 0.0.8 Release --
+
+The 0.0.8 release contains major changes to SVEditor. 
+
+The source-discovery mechanism has changed completely. Now, for best results, 
+the user should provide SVEditor with paths to the package files and/or 
+file lists that specify the source files. If a file is opened that is 
+not part of a defined index, SVEditor will setup a temporary index containing 
+just files in the parent directory.
+
+Improvements have continued on the persistence support. On exit of Eclipse, 
+SVEditor saves the parsed representation of all active indexes to the workspace. 
+SVEditor is able to simply re-load the database from this save file if 
+none of the SystemVerilog files have subseqently been modified. 
+This can save a significant amount of time during Eclipse startup by reducing 
+the amount of redundant parsing. 
+
+Added logging infrastructure, including a method to control debug logging
+from the preferences page and saving the debug log to a file in the workspace.
+
+
+------------------------------------------------------------------------------
+
+-- 0.0.7 Release --
+    - Fix DR 2689430 -- problem with opening/closing/deleting a project in workspace
+        - Sometimes a resource-change event is signaled with a null event
+    - Add patch from <> for basic color preferences
+    - Incorporate patch from <> for DR <> -- problem with paths on Windows
+    - Fix problem with source cross-reference to classes declared 
+      directly within a package. This issue did not affect classes declared
+      within a package via an `include directive.
+    - Add persistence support to prevent unchanged source files from being 
+      re-parsed on every invocation
+*   - Fix problem with resolving macros in the SourceCollection index
+    - Expanded index support with the following new types
+        - Source collection index -- examines file structure and attempts to 
+          determine correct parse order based on include relationships
+        - Library index -- entry point is the root file of a package-based
+          library. Locates included files
+        - Plugin library -- support for packaging common source in a plugin
+          that can be distributed with SVEditor
+    - 
+
+------------------------------------------------------------------------------
+
+-- 0.0.6 Release --
+
+- Add support for 'open declaration' on included file
+- Re-add support for includes and macro definitions in the editor outline
+- Add support for open-declaration on a macro call
+- Add beginnings of 'Override/Implement Methods' action to the editor context menu
+    - Prompts the user for tasks/functions in the super class hierarchy 
+      that can be overridden
+    - Inserts task/function outlines
+- [Development] Add an extension point that allows SystemVerilog libraries 
+  to be packaged in a plug-in
+- Begin adding support for core SystemVerilog classes (string for now)
+- Add OVM 2.0.1 to as a built-in library
+- Fix DR 2683568 -- scanner problem when parsing incomplete begin-end block
+- Add basic support for DPI tasks/functions in the scanner
+- Fixed a problem with content assist on task/function parameter names
+- Added an icon for local variables and task parameters
+
+
+------------------------------------------------------------------------------
+
+-- 0.0.5 Release --
+
+== Completely new pre-processor architecture. Files in a build-path directory
+are processed in two passes now. First, the files are scanned for pre-processor
+definitions, conditionals, and inclusions. Then, when a file is scanned, the
+build context of the file is computed (ie which chain of files is likely to
+include the file being parsed). This allows us to determine which macros
+will be 'live' during file processing.
+
+The new pre-processor architecture allows SVEditor to deal with the heavy 
+macro use of libraries such as OVM. Now, for example, it is possible to
+provide content-assist for class elements in OVM classes that are contributed
+by macros (eg tasks in the various TLM port classes).
+
+== Continued work on content-assist. Now, the expression surrounding the 
+content-assist point is processed so better suggestions can be provided. 
+Also, more context information from the class hierarchy is used. 
+For example:
+
+- given the classes:
+
+class bar;
+    ovm_master_port #(int, int)    p;
+
+endclass
+
+class foo extends bar;
+    
+
+    function void do_something();
+       p.<CONTENT ASSIST> 
+        
+    endfunction
+
+endclass
+
+
+The content-assist processor recognizes that 'p' is the variable for 
+content-assist, locates 'p' via the class hierarchy, and prompts for tasks,
+functions, and fields in the class ovm_master_port.
+
+
+- given the classes:
+
+class bar;
+
+    int a, b, c;
+
+endclass
+
+
+class foo;
+
+    function bar get_bar();
+    endfunction
+
+    function void do_something();
+        get_bar().<CONTENT ASSIST>
+    endfunction
+
+endclass
+
+
+The content-assist processor recognizes the function 'get_bar', finds the 
+return type, and prompts for fields, tasks, etc from the class bar.
+
+
+== Added code templates to content assist. This provides argument templates
+for tasks, functions, macros, and templated classes. 
+
+
+== The content-assist processor can provide content-assist proposals for 
+include files. Typing: `include <CONTENT ASSIST> or 
+`include "prefix<CONTENT ASSIST> will present a list of matching 
+include-file names.
+
+
+
+
+20090102 -- Fix outline label provider
+20090103 -- Eliminate duplicate proposals for include files
+         -- Fixed indexing of files in workspace paths. Previously, only files
+            in non-workspace build paths were added to the index. 
+20090105 -- Correct skipping of constraint body. Constraint body is now ignored
+         -- Pre-processor seems to not always ignore comment content
+20090106 -- Correct problem with pre-processor that resulted in scanner incorrectly
+            processing lines that end with a single-line comment.
+         -- Correct problem with parsing identifiers directly followed by ':'. 
+            For example, endfunction: myfunction
+20090107 -- Update line numbers of SVDB items parsed from the live editor. Affected source
+            is in SVDBFileMerger, SVDBItem, and SVDBScopeItem.
+
+            
+
+------------------------------------------------------------------------------
+
+-- 0.0.4 Release --
+
+20081202 -- Add brace-matching highlighting to editor
+20081213 -- Remove conflict between JDT 'Open Declaration' shortcut and
+            SVEditor's shortcut
+
+          - Added a SVEditor build paths and include paths project-properties page
+
+* Add a build paths and include paths property page
+* Add support for including macros using `include and the file provider
+* Fix bug in handling of extern tasks/functions
+* Support indexing of elements on the build path
+* Extended support for 'open declaration'
+    * Navigation to class declarations defined on build path
+* Add exclusions to Index class: .svn CVS, etc
+* Enhance scanner
+    - Improve support for macros
+        * macros with parameters
+        * Change structure of pre-processor and scanner for better pre-processor support
+    * Scanner now parses 'extends' portion of class declaration
+    * Scanner now parses parameters to class-type fields. Type parameters 
+      are also displayed in the outline
+* Basic support for content assist
+    * Support content assist for `include directives
+    * Support content assist for macro invocations
+    * Prompt for classes on the build path
+    * Prompt for tasks, functions and fields in the current scope (doesn't handle task parameters)
+    * Prompt for tasks, functions, and members in the inheritance hierachy
+    * Support icons on content-assist (helpful in seeing type and attributes of a suggestion)
+* Ensure proper merging of current/new project settings
+* Field-attribute icons on outline now update properly when the attributes
+  change (ie protected -> local)
+* Fix problems with line-number accuracy and macro substitution
+    * Better, but still off-by-one occasionally
+* Enhance 'open declaration' to use the index to traverse the class 
+  hierarchy and find tasks, functions, fields
+
+------------------------------------------------------------------------------
+
+-- 0.0.3 Release --
+
+20081101 - 
+    - Add dedicated C-style comment detector for multi-line comments. Fixes
+      cases where the Eclipse built-in multi-line pattern detector failed.
+
+------------------------------------------------------------------------------
+
+-- Future --
+
+- Hover info-pops
+    - Use same basic parsing strategy as content-assist, but use to drive info-pops that display
+      information about the element under the cursor
+    - Preserve and show attached comments
+
+ - Begin work on users guide
+
+ * Open Declaration Improvements
+    * Add Open Declaration support for included files
+    * Scan context, rather than just using highlighted term
+    * Recognize 'super' and search hierarchy
+ - Add auto-indent rules centered around begin/end and brackets
+ - Add inheritance hierarchy viewer
+ - Notification on build-path change. Ensure setting a new build path results in re-scanning
+ - Need a better strategy for cross-editor navigation. We loose our build-path context when we switch to an editor for a file on the build path
+ * Investigate mismatch between macro def and invocation parameter counts
+ - Support folding of begin/end regions
+ - Add Design Hierarchy view, showing modules and their instantiation     
+   relationships
+ - Some sort of library-specific macro filtering could be helpful. (eg don't expand `ovm_component_utils)
+
+ * Update build-path management to support
+    - 'library' entries -- single file that is the root of a library (eg OVM)
+    - filtering source from 
+
+ * Support read-only source in a plugin. Useful for libraries (OVM/VMM).
+    - A library index processes files as follows:
+        - Entry point is root file
+        - Any file included by that file or sub-files is included in the index
+        - Process recursively:
+            - At each level, create an SVDBFileTree object to work with
+            - Reference parent's SVDBFileTree object
+                -> Must 'pre-process' SVDBFileTree to resolve conditionals
+            - Monitor inclusions. As files are included:
+                - Ensure they exist as SVDBFileTree objects
+                - Add to the DefineProvider
+                - Check whether file has already been parsed. 
+                    - Add to TODO list if not
+ - Add basic support for Verilog .f files. This might be a concise way to specify the build process...
+ - Need a multi-level sort for content proposals
+    - order by name
+    - 
+    - order by scope distance (local variables, parameters, tf, types, etc)
+    - any 
+
+
+</pre>
